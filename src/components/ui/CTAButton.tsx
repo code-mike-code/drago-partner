@@ -6,7 +6,7 @@ interface CTAButtonProps {
   onClick?: React.MouseEventHandler
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
-  variant?: 'yellow' | 'dark'
+  variant?: 'yellow' | 'dark' | 'grey'
   size?: 'sm' | 'md'
   className?: string
   children: React.ReactNode

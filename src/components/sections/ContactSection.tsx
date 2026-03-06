@@ -22,7 +22,7 @@ export function ContactSection() {
       element: (
         <a
           href={`tel:${phone.replace(/\s/g, '')}`}
-          className="text-grey-mid pt-2.5 text-sm hover:text-illuminating transition-colors duration-200"
+          className="text-white pt-2.5 text-sm hover:text-illuminating transition-colors duration-200"
         >
           {phone}
         </a>
@@ -34,7 +34,7 @@ export function ContactSection() {
       element: (
         <a
           href={`mailto:${email}`}
-          className="text-grey-mid pt-2.5 text-sm hover:text-illuminating transition-colors duration-200"
+          className="text-white pt-2.5 text-sm hover:text-illuminating transition-colors duration-200"
         >
           {email}
         </a>
@@ -46,7 +46,7 @@ export function ContactSection() {
       element: (
         <button
           onClick={() => setMapOpen(true)}
-          className="text-grey-mid pt-2.5 text-sm text-left hover:text-illuminating transition-colors duration-200"
+          className="text-white pt-2.5 text-sm text-left hover:text-illuminating transition-colors duration-200"
         >
           {address}
         </button>
@@ -56,7 +56,7 @@ export function ContactSection() {
       icon: Clock,
       value: hours,
       element: (
-        <span className="text-grey-mid pt-2.5 text-sm">{hours}</span>
+        <span className="text-white pt-2.5 text-sm">{hours}</span>
       ),
     },
   ]
@@ -82,12 +82,9 @@ export function ContactSection() {
                 <CTAButton href="#contact-form" variant="yellow">
                   {t('contact.ctaPrimary')}
                 </CTAButton>
-                <button
-                  onClick={() => setModalOpen(true)}
-                  className="border border-white/30 text-white text-sm font-bold px-8 py-4 min-h-[44px] flex items-center justify-center hover:border-white/60 transition-colors duration-200"
-                >
+                <CTAButton onClick={() => setModalOpen(true)} variant="dark">
                   {t('contact.ctaSecondary')}
-                </button>
+                </CTAButton>
               </div>
             </div>
 

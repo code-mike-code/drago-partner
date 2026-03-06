@@ -24,7 +24,7 @@ export function NavLink({ href, children, className, onClick }: NavLinkProps) {
       href={href}
       onClick={handleClick}
       className={cn(
-        'text-sm font-medium text-dark hover:text-grey-mid transition-colors duration-200',
+        'text-lg font-bold text-dark hover:text-grey-mid transition-colors duration-200',
         className,
       )}
     >

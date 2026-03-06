@@ -42,12 +42,9 @@ export function HeroSection() {
               <CTAButton href="#contact-form" variant="yellow">
                 {t('hero.ctaPrimary')}
               </CTAButton>
-              <button
-                onClick={() => setModalOpen(true)}
-                className="border border-dark/20 text-dark text-sm font-bold px-8 py-4 min-h-[44px] flex items-center justify-center hover:border-dark/50 hover:bg-dark/5 transition-colors duration-200"
-              >
-                {t('hero.ctaSecondary')}
-              </button>
+              <CTAButton onClick={() => setModalOpen(true)} variant="dark">
+                  {t('contact.ctaSecondary')}
+              </CTAButton>
             </div>
           </div>
 

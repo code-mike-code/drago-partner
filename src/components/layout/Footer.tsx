@@ -38,7 +38,7 @@ export function Footer() {
             </div>
 
             {/* Navigation */}
-            <div>
+            <div className='pt-10'>
               <p className="text-xs font-semibold uppercase tracking-widest text-grey-mid mb-4">
                 {t('footer.links.heading')}
               </p>
@@ -57,7 +57,7 @@ export function Footer() {
             </div>
 
             {/* Contact info */}
-            <div>
+            <div className='pt-10'>
               <p className="text-xs font-semibold uppercase tracking-widest text-grey-mid mb-4">
                 {t('nav.contact')}
               </p>
@@ -93,7 +93,7 @@ export function Footer() {
             </div>
 
             {/* Social */}
-            <div>
+            <div className='pt-10'>
               <p className="text-xs font-semibold uppercase tracking-widest text-grey-mid mb-4">
                 Social
               </p>

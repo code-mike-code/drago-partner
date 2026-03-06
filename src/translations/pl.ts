@@ -136,7 +136,7 @@ export const pl = {
 
   // Footer
   footer: {
-    tagline: 'Rekrutacja kierowców zawodowych',
+    tagline: 'Z Drago Partner pracujesz na własnych zasadach, a my dbamy o formalności, flotę i codzienne wsparcie. Zgłoś się i zacznij współpracę w Warszawie jako kierowca lub kurier już teraz.',
     links: {
       heading: 'Nawigacja',
     },

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 1.1rem;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
@@ -73,6 +73,20 @@
 .cta-btn--dark:hover,
 .cta-btn--dark:focus-visible {
   color: #111111;
+}
+/* Grey variant */
+.cta-btn--grey {
+  background: #111111;
+  color: #ffffff;
+}
+
+.cta-btn--grey::before {
+  background: #939597;
+}
+
+.cta-btn--grey:hover,
+.cta-btn--grey:focus-visible {
+  color: #f5df4d;
 }
 
 /* Sizes */

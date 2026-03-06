@@ -13,9 +13,11 @@ const LANGUAGES: { code: Language; flag: string; label: string }[] = [
 
 interface LanguageSwitcherProps {
   className?: string
+  dropdownAlign?: 'left' | 'right'
+  dropdownLayout?: 'list' | 'grid'
 }
 
-export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
+export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownLayout = 'list' }: LanguageSwitcherProps) {
   const { language, setLanguage } = useLanguage()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -53,7 +55,11 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
       {open && (
         <div
           role="listbox"
-          className="absolute right-0 top-full mt-1 w-44 bg-white border border-gray-100 shadow-lg z-50 py-1"
+          className={cn(
+            'absolute top-full mt-1 bg-white border border-gray-100 shadow-lg z-50',
+            dropdownAlign === 'right' ? 'right-0' : 'left-0',
+            dropdownLayout === 'grid' ? 'grid grid-cols-3 p-1 w-40' : 'w-44 py-1',
+          )}
         >
           {LANGUAGES.map(({ code, flag, label }) => (
             <button
@@ -62,14 +68,24 @@ export function LanguageSwitcher({ className }: LanguageSwitcherProps) {
               aria-selected={language === code}
               onClick={() => { setLanguage(code); setOpen(false) }}
               className={cn(
-                'w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors duration-150',
-                language === code
-                  ? 'text-dark font-semibold bg-gray-50'
-                  : 'text-grey-mid hover:text-dark hover:bg-gray-50',
+                'flex items-center transition-colors duration-150',
+                dropdownLayout === 'grid'
+                  ? cn(
+                      'flex-col gap-1 p-2 text-xs font-semibold justify-center',
+                      language === code
+                        ? 'text-dark bg-gray-50'
+                        : 'text-grey-mid hover:text-dark hover:bg-gray-50',
+                    )
+                  : cn(
+                      'w-full gap-3 px-4 py-2.5 text-sm',
+                      language === code
+                        ? 'text-dark font-semibold bg-gray-50'
+                        : 'text-grey-mid hover:text-dark hover:bg-gray-50',
+                    ),
               )}
             >
               <span className="text-base leading-none">{flag}</span>
-              <span>{label}</span>
+              <span>{code.toUpperCase()}</span>
             </button>
           ))}
         </div>

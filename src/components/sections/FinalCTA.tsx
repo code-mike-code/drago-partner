@@ -11,7 +11,7 @@ export function FinalCTA() {
           <h2 className="text-3xl sm:text-4xl font-black text-dark leading-tight">
             {t('hero.title')}
           </h2>
-          <CTAButton href="#contact-form" variant="dark" className="shrink-0">
+          <CTAButton href="#contact-form" variant="grey" className="shrink-0">
             {t('nav.cta')}
           </CTAButton>
         </div>
