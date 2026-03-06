@@ -30,7 +30,7 @@ export function Header() {
           </a>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-8 mt-2 tracking-wider">
+          <nav className="hidden lg:flex items-center gap-8 mt-2 tracking-wider">
             {navItems.map((item) => (
               <NavLink
                 key={item.href}
@@ -43,7 +43,7 @@ export function Header() {
           </nav>
 
           {/* Desktop right */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
             <CTAButton href="#contact-form" variant="yellow" size="sm">
               {t('nav.cta')}
@@ -73,7 +73,7 @@ export function Header() {
           {/* Mobile toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-dark"
+            className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-dark"
             aria-label="Toggle menu"
             aria-expanded={mobileOpen}
           >
@@ -85,7 +85,7 @@ export function Header() {
       {/* Mobile menu — full screen overlay */}
       <div
         className={cn(
-          'md:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-40',
+          'lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-40',
           'flex flex-col overflow-y-auto',
           'transition-transform duration-300',
           mobileOpen ? 'translate-y-0' : '-translate-y-[calc(100%+64px)] pointer-events-none',

@@ -11,5 +11,6 @@ export default defineConfig({
   },
   server: {
     port: 8080,
+    allowedHosts: true // Zezwala na dostęp z każdego adresu (w tym ngrok)
   },
 })

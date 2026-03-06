@@ -47,7 +47,7 @@ export function AboutSection() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="py-10 sm:px-8 border-b sm:border-b-0 sm:border-r border-gray-100 last:border-0"
+              className="py-10 sm:px-8 border-b sm:border-b-0 sm:border-r border-gray-100 last:border-0 text-center"
             >
               <p className="text-4xl font-black text-dark mb-2">{stat.value}</p>
               <p className="text-sm text-grey-mid">{stat.label}</p>
