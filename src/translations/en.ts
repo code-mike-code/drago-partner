@@ -41,6 +41,24 @@ export const en = {
       title: 'Support & growth',
       description: 'Our team is available 7 days a week to assist with any operational matter and support your professional development.',
     },
+    item4: {
+      number: '04',
+      title: 'Flexible schedule — you decide',
+      description: 'Work when you want and as much as you want. As a driver or courier at Drago Partner, you set your own hours and manage your time like your own boss — no employment obligations.',
+    },
+    item5: {
+      number: '05',
+      title: 'Attractive earnings from day one',
+      description: 'Through cooperation with top platforms: Uber, Bolt, FreeNow, Uber Eats and Bolt Food, our drivers and couriers achieve some of the best earnings on the market. Start earning from your very first day behind the wheel.',
+    },
+    promo1: {
+      heading: 'Earn as a driver or courier with Drago Partner in Warsaw',
+      text: 'Join Drago Partner and work on your own terms as a taxi driver or food delivery courier. We offer a modern vehicle fleet, flexible schedule, fast start and full support for drivers and couriers working with Uber, Bolt, FreeNow, Uber Eats and Bolt Food.',
+    },
+    promo2: {
+      heading: 'Why join us?',
+      text: 'Drago Partner is a trusted fleet partner in Warsaw, providing attractive working conditions, comprehensive support at every stage and a fast earnings start. Click, apply and start working as a driver or courier with reliable support and legal settlement.',
+    },
   },
 
   faq: {

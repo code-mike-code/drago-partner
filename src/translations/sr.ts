@@ -41,6 +41,24 @@ export const sr = {
       title: 'Podrška i razvoj',
       description: 'Naš tim je dostupan 7 dana u nedelji za pomoć oko svakog operativnog pitanja i podršku vašem profesionalnom razvoju.',
     },
+    item4: {
+      number: '04',
+      title: 'Fleksibilni raspored — vi odlučujete',
+      description: 'Radite kada hoćete i koliko hoćete. Kao vozač ili kurir u Drago Partner sami određujete radno vreme i upravljate sobom kao sopstveni šef — bez obaveza zaposlenog.',
+    },
+    item5: {
+      number: '05',
+      title: 'Atraktivna zarada od prvog dana',
+      description: 'Zahvaljujući saradnji sa top platformama: Uber, Bolt, FreeNow, Uber Eats i Bolt Food, naši vozači i kuriri ostvaruju jedne od najboljih zarada na tržištu. Počnite da zarađujete već od prvog dana za volanom.',
+    },
+    promo1: {
+      heading: 'Zarađujte kao vozač ili kurir sa Drago Partner u Varšavi',
+      text: 'Pridružite se Drago Partner-u i radite po sopstvenim pravilima kao taksista ili dostavljač hrane. Nudimo modernu voznu flotu, fleksibilni raspored, brzi start i punu podršku za vozače i kurire koji sarađuju sa Uber, Bolt, FreeNow, Uber Eats i Bolt Food.',
+    },
+    promo2: {
+      heading: 'Zašto nam se pridružiti?',
+      text: 'Drago Partner je proveren fleet partner u Varšavi koji obezbeđuje atraktivne uslove rada, sveobuhvatnu pomoć u svakoj fazi i brzi početak zarade. Kliknite, prijavite se i počnite da radite kao vozač ili kurir uz sigurnu podršku i legalno poravnanje.',
+    },
   },
 
   faq: {

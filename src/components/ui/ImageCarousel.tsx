@@ -56,7 +56,7 @@ export function ImageCarousel({
               'h-2 transition-all duration-300',
               i === current
                 ? 'w-6 bg-illuminating'
-                : 'w-2 bg-white/60 hover:bg-white',
+                : 'w-2 bg-grey-mid hover:bg-white',
             )}
           />
         ))}

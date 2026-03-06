@@ -20,6 +20,7 @@ export const pl = {
   // About Section
   about: {
     heading: 'Kim jesteśmy',
+    headingSecond: 'Nasza Flota',
     text: 'Drago Partner to sprawdzony partner flotowy z niemal 10-letnim doświadczeniem na rynku. Kompleksowo wspieramy kierowców i kurierów pracujących z najpopularniejszymi aplikacjami: Uber, Bolt, FreeNow, a także Uber Eats i Bolt Food.',
     desc: 'Dysponujemy własną, dużą i nowoczesną flotą pojazdów. Gwarantujemy pełną pomoc na każdym etapie – od rejestracji i szkoleń po codzienne rozliczenia – abyś Ty mógł skupić się wyłącznie na tym, co ważne: bezpiecznej jeździe i zarabianiu.',
     stat1: { value: '500+', label: 'Aktywnych kierowców' },
@@ -45,6 +46,24 @@ export const pl = {
       number: '03',
       title: 'Wsparcie i rozwój',
       description: 'Nasz zespół jest dostępny 7 dni w tygodniu, aby pomóc w każdej kwestii operacyjnej i wspierać Twój rozwój zawodowy.',
+    },
+    item4: {
+      number: '04',
+      title: 'Elastyczny grafik — Ty decydujesz',
+      description: 'Pracujesz kiedy chcesz i tyle, ile chcesz. Jako kierowca lub kurier w Drago Partner sam ustalasz godziny pracy i zarządzasz swoim czasem jak własny szef — bez etatowych zobowiązań.',
+    },
+    item5: {
+      number: '05',
+      title: 'Atrakcyjne zarobki od pierwszego dnia',
+      description: 'Dzięki współpracy z topowymi platformami: Uber, Bolt, FreeNow, Uber Eats i Bolt Food, nasi kierowcy i kurierzy osiągają jedne z najlepszych zarobków na rynku. Zacznij zarabiać już od pierwszego dnia za kółkiem.',
+    },
+    promo1: {
+      heading: 'Zarabiaj jako kierowca lub dostawca z Drago Partner w Warszawie',
+      text: 'Dołącz do Drago Partner i pracuj na własnych zasadach jako kierowca taxi lub dostawca jedzenia. Oferujemy nowoczesną flotę aut, elastyczny grafik, szybki start oraz pełne wsparcie dla kierowców i kurierów współpracujących z Uber, Bolt, FreeNow oraz Uber Eats i Bolt Food.',
+    },
+    promo2: {
+      heading: 'Dlaczego warto do nas dołączyć?',
+      text: 'Drago Partner to sprawdzony partner flotowy w Warszawie, który zapewnia atrakcyjne warunki pracy, kompleksową pomoc na każdym etapie oraz szybkie rozpoczęcie zarabiania. Kliknij, zgłoś się i zacznij pracę jako kierowca lub kurier z pewnym wsparciem i legalnym rozliczeniem.',
     },
   },
 

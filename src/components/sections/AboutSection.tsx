@@ -1,7 +1,7 @@
 import { useLanguage } from '@/hooks/useLanguage'
 import { ImageCarousel } from '@/components/ui/ImageCarousel'
-import about1 from '@/assets/img/about-1.jpg'
-import about2 from '@/assets/img/about-2.jpg'
+import about1 from '@/assets/img/about-1.png'
+import about2 from '@/assets/img/about-2.png'
 import about3 from '@/assets/img/about-3.jpg'
 import about4 from '@/assets/img/about-4.jpg'
 import about5 from '@/assets/img/about-5.jpg'
@@ -57,17 +57,21 @@ export function AboutSection() {
 
         {/* Two-column layout: text + carousel */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-20">
-          <div>
-            <p className="text-lg text-grey-mid leading-relaxed">
-              {t('about.desc')}
-            </p>
-          </div>
           <ImageCarousel
             slides={ABOUT_SLIDES}
             interval={5000}
             imgClassName="object-cover"
             className="h-80 lg:h-96"
           />
+          <div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-dark leading-none tracking-tight">
+              {t('about.headingSecond')}
+            </h2>
+            <br />
+            <p className="text-lg text-grey-mid leading-relaxed">
+              {t('about.desc')}
+            </p>
+          </div>
         </div>
       </div>
     </section>

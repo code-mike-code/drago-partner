@@ -19,6 +19,16 @@ export function ServicesSection() {
       title: t('services.item3.title'),
       description: t('services.item3.description'),
     },
+    {
+      number: t('services.item4.number'),
+      title: t('services.item4.title'),
+      description: t('services.item4.description'),
+    },
+    {
+      number: t('services.item5.number'),
+      title: t('services.item5.title'),
+      description: t('services.item5.description'),
+    },
   ]
 
   return (
@@ -49,6 +59,26 @@ export function ServicesSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Promo blocks */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 mt-20">
+          <div>
+            <h3 className="text-2xl sm:text-3xl font-black text-dark leading-tight mb-4">
+              {t('services.promo1.heading')}
+            </h3>
+            <p className="text-grey-mid leading-relaxed">
+              {t('services.promo1.text')}
+            </p>
+          </div>
+          <div className="lg:text-right">
+            <h3 className="text-2xl sm:text-3xl font-black text-dark leading-tight mb-4">
+              {t('services.promo2.heading')}
+            </h3>
+            <p className="text-grey-mid leading-relaxed">
+              {t('services.promo2.text')}
+            </p>
+          </div>
         </div>
       </div>
     </section>
