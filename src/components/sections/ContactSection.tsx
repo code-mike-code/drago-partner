@@ -4,6 +4,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { BookingModal } from '@/components/modals/BookingModal'
 import { MapPopover } from '@/components/ui/MapPopover'
+import { Reveal } from '@/components/ui/Reveal'
 
 export function ContactSection() {
   const { t } = useLanguage()
@@ -71,33 +72,41 @@ export function ContactSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* CTA column */}
             <div>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-none tracking-tight mb-6">
-                {t('contact.heading')}
-              </h2>
-              <p className="text-grey-mid text-lg mb-10">
-                {t('contact.subheading')}
-              </p>
+              <Reveal>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-none tracking-tight mb-6">
+                  {t('contact.heading')}
+                </h2>
+              </Reveal>
+              <Reveal delay={140}>
+                <p className="text-white/70 text-lg mb-10">
+                  {t('contact.subheading')}
+                </p>
+              </Reveal>
 
-              <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
-                <CTAButton href="#contact-form" variant="yellow">
-                  {t('contact.ctaPrimary')}
-                </CTAButton>
-                <CTAButton onClick={() => setModalOpen(true)} variant="dark">
-                  {t('contact.ctaSecondary')}
-                </CTAButton>
-              </div>
+              <Reveal delay={280}>
+                <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4">
+                  <CTAButton href="#contact-form" variant="yellow">
+                    {t('contact.ctaPrimary')}
+                  </CTAButton>
+                  <CTAButton onClick={() => setModalOpen(true)} variant="dark">
+                    {t('contact.ctaSecondary')}
+                  </CTAButton>
+                </div>
+              </Reveal>
             </div>
 
             {/* Contact info column */}
             <div className="flex flex-col justify-center">
               <ul className="space-y-6">
-                {contactItems.map(({ icon: Icon, value, element }, index) => (
-                  <li key={index} className="flex items-start gap-4">
-                    <div className="w-10 h-10 flex items-center justify-center bg-white/5 shrink-0">
-                      <Icon size={16} className="text-illuminating" />
-                    </div>
-                    {element}
-                  </li>
+                {contactItems.map(({ icon: Icon, element }, index) => (
+                  <Reveal key={index} delay={360 + index * 70}>
+                    <li className="flex items-start gap-4">
+                      <div className="w-10 h-10 flex items-center justify-center bg-white/5 shrink-0">
+                        <Icon size={16} className="text-illuminating" />
+                      </div>
+                      {element}
+                    </li>
+                  </Reveal>
                 ))}
               </ul>
             </div>

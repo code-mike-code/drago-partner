@@ -20,10 +20,14 @@ export function ImageCarousel({
   className,
 }: ImageCarouselProps) {
   const [current, setCurrent] = useState(0)
+  // Increments on every slide change so each newly active image gets a fresh key,
+  // forcing React to remount it and replay animate-carousel-enter.
+  const [changeCount, setChangeCount] = useState(0)
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length)
+      setChangeCount((c) => c + 1)
     }, interval)
     return () => clearInterval(timer)
   }, [slides.length, interval])
@@ -33,14 +37,23 @@ export function ImageCarousel({
       {slides.map((slide, i) => (
         <div
           key={i}
-          className="absolute inset-0 transition-opacity duration-700 ease-in-out"
-          style={{ opacity: i === current ? 1 : 0 }}
+          className="absolute inset-0"
+          style={{
+            opacity: i === current ? 1 : 0,
+            transition: 'opacity 700ms ease-in-out',
+          }}
           aria-hidden={i !== current}
         >
           <img
+            // Key changes when this slide becomes active → remount → animation replays
+            key={i === current ? `${i}-${changeCount}` : i}
             src={slide.src}
             alt={slide.alt}
-            className={cn('w-full h-full', imgClassName)}
+            className={cn(
+              'w-full h-full',
+              i === current ? 'animate-carousel-enter' : '',
+              imgClassName,
+            )}
           />
         </div>
       ))}
@@ -50,7 +63,7 @@ export function ImageCarousel({
         {slides.map((_, i) => (
           <button
             key={i}
-            onClick={() => setCurrent(i)}
+            onClick={() => { setCurrent(i); setChangeCount((c) => c + 1) }}
             aria-label={`Slide ${i + 1}`}
             className={cn(
               'h-2 transition-all duration-300',

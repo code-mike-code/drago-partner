@@ -1,5 +1,7 @@
 import { useLanguage } from '@/hooks/useLanguage'
 import { ImageCarousel } from '@/components/ui/ImageCarousel'
+import { WaveText } from '@/components/ui/WaveText'
+import { Reveal } from '@/components/ui/Reveal'
 import about1 from '@/assets/img/about-1.png'
 import about2 from '@/assets/img/about-2.png'
 import about3 from '@/assets/img/about-3.jpg'
@@ -28,41 +30,45 @@ export function AboutSection() {
   return (
     <section id="about" className="py-24 md:py-32 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Two-column layout */}
+        {/* Top block: heading + text */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-20">
           <div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-dark leading-none tracking-tight">
-              {t('about.heading')}
+              <WaveText text={t('about.heading')} delay={100} charDelay={22} />
             </h2>
           </div>
           <div>
             <p className="text-lg text-grey-mid leading-relaxed">
-              {t('about.text')}
+              <WaveText text={t('about.text')} charDelay={6} />
             </p>
           </div>
         </div>
 
         {/* Stats row */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-gray-100">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="py-10 sm:px-8 border-b sm:border-b-0 sm:border-r border-gray-100 last:border-0 text-center"
-            >
-              <p className="text-4xl font-black text-dark mb-2">{stat.value}</p>
-              <p className="text-sm text-grey-mid">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+        <Reveal delay={700}>
+          <div className="grid grid-cols-1 sm:grid-cols-3 border-t border-gray-100">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="py-10 sm:px-8 border-b sm:border-b-0 sm:border-r border-gray-100 last:border-0 text-center"
+              >
+                <p className="text-4xl font-black text-dark mb-2">{stat.value}</p>
+                <p className="text-sm text-grey-mid">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
 
-        {/* Two-column layout: text + carousel */}
+        {/* Bottom block: carousel + text */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mt-20">
-          <ImageCarousel
-            slides={ABOUT_SLIDES}
-            interval={5000}
-            imgClassName="object-cover"
-            className="h-80 lg:h-96"
-          />
+          <Reveal variant="scale">
+            <ImageCarousel
+              slides={ABOUT_SLIDES}
+              interval={5000}
+              imgClassName="object-cover"
+              className="h-80 lg:h-96"
+            />
+          </Reveal>
           <div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-dark leading-none tracking-tight">
               {t('about.headingSecond')}

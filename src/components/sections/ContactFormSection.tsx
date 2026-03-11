@@ -4,6 +4,7 @@ import { CheckCircle, AlertCircle, Loader2 } from 'lucide-react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { cn } from '@/lib/utils'
+import { Reveal } from '@/components/ui/Reveal'
 
 type CarOption = 'own' | 'rent' | ''
 
@@ -95,14 +96,20 @@ export function ContactFormSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Heading column */}
           <div className="lg:pt-2">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-dark leading-none tracking-tight mb-6">
-              {t('form.heading')}
-            </h2>
-            <p className="text-grey-mid text-lg">{t('form.subheading')}</p>
+            <Reveal>
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-dark leading-none tracking-tight mb-6">
+                {t('form.heading')}
+              </h2>
+            </Reveal>
+            <Reveal delay={140}>
+              <p className="text-grey-mid text-lg">
+                {t('form.subheading')}
+              </p>
+            </Reveal>
           </div>
 
           {/* Form column */}
-          <div>
+          <Reveal delay={280}>
             {status === 'success' ? (
               <div className="flex flex-col items-start gap-4 py-12">
                 <CheckCircle size={40} className="text-dark" />
@@ -270,7 +277,7 @@ export function ContactFormSection() {
                 </CTAButton>
               </form>
             )}
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
