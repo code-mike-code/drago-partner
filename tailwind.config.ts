@@ -26,6 +26,7 @@ const config: Config = {
         '2xl': '0',
         '3xl': '0',
         full: '0',
+        circle: '9999px',
       },
       scale: {
         '65': '0.65',

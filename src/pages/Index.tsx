@@ -10,6 +10,7 @@ import { ServicesSection } from '@/components/sections/ServicesSection'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget'
 
 export default function Index() {
   const { t } = useLanguage()
@@ -33,6 +34,7 @@ export default function Index() {
         <FinalCTA />
       </main>
       <Footer />
+      <WhatsAppWidget />
     </>
   )
 }
