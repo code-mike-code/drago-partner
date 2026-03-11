@@ -12,6 +12,7 @@ export function ContactSection() {
   const [mapOpen, setMapOpen] = useState(false)
 
   const phone = t('contact.info.phone')
+  const phoneNote = t('contact.info.phoneNote')
   const email = t('contact.info.email')
   const address = t('contact.info.address')
   const hours = t('contact.info.hours')
@@ -21,12 +22,17 @@ export function ContactSection() {
       icon: Phone,
       value: phone,
       element: (
-        <a
-          href={`tel:${phone.replace(/\s/g, '')}`}
-          className="text-white pt-2.5 text-sm hover:text-illuminating transition-colors duration-200"
-        >
-          {phone}
-        </a>
+        <div className="pt-2.5 flex flex-col gap-0.5">
+          <a
+            href={`tel:${phone.replace(/\s/g, '')}`}
+            className="text-white text-sm hover:text-illuminating transition-colors duration-200"
+          >
+            {phone}
+          </a>
+          {phoneNote && (
+            <span className="text-white/50 text-xs">{phoneNote}</span>
+          )}
+        </div>
       ),
     },
     {

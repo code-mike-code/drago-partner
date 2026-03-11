@@ -42,7 +42,7 @@ export function MapPopover({ address, open, onClose }: MapPopoverProps) {
             <X size={18} />
           </button>
         </div>
-        <div className="h-64 sm:h-80 md:h-96">
+        <div className="h-[50vh] sm:h-[55vh] md:h-[60vh]">
           {open && (
             <iframe
               title="Lokalizacja"

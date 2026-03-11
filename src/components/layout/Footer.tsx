@@ -12,6 +12,7 @@ export function Footer() {
   const [mapOpen, setMapOpen] = useState(false)
 
   const phone = t('contact.info.phone')
+  const phoneNote = t('contact.info.phoneNote')
   const email = t('contact.info.email')
   const address = t('contact.info.address')
 
@@ -64,12 +65,17 @@ export function Footer() {
               <ul className="space-y-3 text-sm text-grey-mid">
                 <li className="flex items-start gap-2">
                   <Phone size={14} className="mt-0.5 shrink-0 text-illuminating" />
-                  <a
-                    href={`tel:${phone.replace(/\s/g, '')}`}
-                    className="hover:text-white transition-colors duration-200"
-                  >
-                    {phone}
-                  </a>
+                  <div className="flex flex-col gap-0.5">
+                    <a
+                      href={`tel:${phone.replace(/\s/g, '')}`}
+                      className="hover:text-white transition-colors duration-200"
+                    >
+                      {phone}
+                    </a>
+                    {phoneNote && (
+                      <span className="text-grey-mid/60 text-xs">{phoneNote}</span>
+                    )}
+                  </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <Mail size={14} className="mt-0.5 shrink-0 text-illuminating" />
@@ -86,7 +92,9 @@ export function Footer() {
                     onClick={() => setMapOpen(true)}
                     className="text-left hover:text-white transition-colors duration-200"
                   >
-                    {address}
+                    Modlińska 310/312 lok. 2<br />
+                    03-152 Warszawa<br />
+                    (Fort Piontek)
                   </button>
                 </li>
               </ul>
@@ -99,7 +107,9 @@ export function Footer() {
               </p>
               <div className="flex gap-5">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/dragopartnertaxi?igsh=MXd3NzRtbTltcWdncA=="
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="text-grey-mid hover:text-white transition-colors duration-200"
                 >
@@ -110,7 +120,9 @@ export function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/share/1CYoKHcnMd/?mibextid=wwXIfr"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Facebook"
                   className="text-grey-mid hover:text-white transition-colors duration-200"
                 >

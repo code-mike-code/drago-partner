@@ -1,4 +1,4 @@
-export const uk = {
+export const ua = {
   nav: {
     about: 'Про нас',
     services: 'Послуги',
@@ -114,10 +114,11 @@ export const uk = {
     ctaPrimary: 'Заповнити анкету',
     ctaSecondary: 'Записатися в офіс',
     info: {
-      phone: '+48 000 000 000',
-      email: 'kontakt@dragopartner.pl',
-      address: 'вул. Прикладна 1, 00-000 Варшава',
-      hours: 'Пн–Пт: 9:00–18:00',
+      phone: '+48 530 181 372',
+      phoneNote: 'UA / GR / RUS',
+      email: 'dragopartner@dragopartner.pl',
+      address: 'Modlińska 310/312 lok. 2, 03-152 Warszawa (Fort Piontek)',
+      hours: 'Пн – Пт: 10:00 – 18:00',
     },
     modalTitle: 'Важлива інформація',
     modalText: 'Записуйтесь на зустріч лише якщо ви заповнили анкету та маєте повний комплект документів. Якщо документи відсутні, зверніться до офісу телефоном.',

@@ -6,9 +6,9 @@ import { cn } from '@/lib/utils'
 const LANGUAGES: { code: Language; flag: string; label: string }[] = [
   { code: 'pl', flag: '🇵🇱', label: 'Polski' },
   { code: 'en', flag: '🇬🇧', label: 'English' },
-  { code: 'uk', flag: '🇺🇦', label: 'Українська' },
+  { code: 'ua', flag: '🇺🇦', label: 'Українська' },
   { code: 'sr', flag: '🇷🇸', label: 'Srpski' },
-  { code: 'ge', flag: '🇬🇪', label: 'ქართული' },
+  { code: 'gr', flag: '🇬🇪', label: 'ქართული' },
 ]
 
 interface LanguageSwitcherProps {

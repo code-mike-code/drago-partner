@@ -1,4 +1,4 @@
-export const ge = {
+export const gr = {
   nav: {
     about: 'ჩვენ შესახებ',
     services: 'სერვისები',
@@ -114,10 +114,11 @@ export const ge = {
     ctaPrimary: 'შეავსე სააპლიკაციო ფორმა',
     ctaSecondary: 'დაჯავშნე ოფისში ვიზიტი',
     info: {
-      phone: '+48 000 000 000',
-      email: 'kontakt@dragopartner.pl',
-      address: 'ul. Przykładowa 1, 00-000 ვარშავა',
-      hours: 'ორშ–პარ: 9:00–18:00',
+      phone: '+48 530 181 372',
+      phoneNote: 'UA / GR / RUS',
+      email: 'dragopartner@dragopartner.pl',
+      address: 'Modlińska 310/312 lok. 2, 03-152 Warszawa (Fort Piontek)',
+      hours: 'ორშ – პარ: 10:00 – 18:00',
     },
     modalTitle: 'მნიშვნელოვანი შეტყობინება',
     modalText: 'ვიზიტი დაჯავშნე მხოლოდ იმ შემთხვევაში, თუ შეავსე სააპლიკაციო ფორმა და გაქვს სრული კომპლექტი დოკუმენტებისა. დოკუმენტების არარსებობის შემთხვევაში დაუკავშირდი ოფისს ტელეფონით.',

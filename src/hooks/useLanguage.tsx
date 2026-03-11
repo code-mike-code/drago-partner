@@ -7,20 +7,20 @@ import {
 } from 'react'
 import { pl } from '@/translations/pl'
 import { en } from '@/translations/en'
-import { uk } from '@/translations/uk'
+import { ua } from '@/translations/ua'
 import { sr } from '@/translations/sr'
-import { ge } from '@/translations/ge'
+import { gr } from '@/translations/gr'
 
-export type Language = 'pl' | 'en' | 'uk' | 'sr' | 'ge'
+export type Language = 'pl' | 'en' | 'ua' | 'sr' | 'gr'
 
 type TranslationValue = string | Record<string, unknown>
 
 const translations: Record<Language, Record<string, TranslationValue>> = {
   pl,
   en,
-  uk,
+  ua,
   sr,
-  ge,
+  gr,
 }
 
 function getNestedValue(
