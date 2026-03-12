@@ -2,20 +2,20 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { ImageCarousel } from '@/components/ui/ImageCarousel'
 import { WaveText } from '@/components/ui/WaveText'
 import { Reveal } from '@/components/ui/Reveal'
-import about1 from '@/assets/img/about-1.png'
-import about2 from '@/assets/img/about-2.png'
-import about3 from '@/assets/img/about-3.jpg'
-import about4 from '@/assets/img/about-4.jpg'
-import about5 from '@/assets/img/about-5.jpg'
-import about6 from '@/assets/img/about-6.jpg'
+import about1 from '@/assets/img/about-1.webp'
+import about2 from '@/assets/img/about-2.webp'
+import about3 from '@/assets/img/about-3.webp'
+import about4 from '@/assets/img/about-4.webp'
+import about5 from '@/assets/img/about-5.webp'
+import about6 from '@/assets/img/about-6.webp'
 
 const ABOUT_SLIDES = [
-  { src: about1, alt: '' },
-  { src: about2, alt: '' },
-  { src: about3, alt: '' },
-  { src: about4, alt: '' },
-  { src: about5, alt: '' },
-  { src: about6, alt: '' },
+  { src: about1, alt: 'Kierowca Drago Partner przy samochodzie' },
+  { src: about2, alt: 'Samochód flotowy Drago Partner' },
+  { src: about3, alt: 'Kierowca Uber w trakcie kursu' },
+  { src: about4, alt: 'Kierowca Bolt odbiera pasażera' },
+  { src: about5, alt: 'Nowoczesna flota pojazdów Drago Partner' },
+  { src: about6, alt: 'Kierowca podczas szkoleń Drago Partner' },
 ]
 
 export function AboutSection() {

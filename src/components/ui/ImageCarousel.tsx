@@ -11,6 +11,7 @@ interface ImageCarouselProps {
   interval?: number
   imgClassName?: string
   className?: string
+  eagerFirst?: boolean
 }
 
 export function ImageCarousel({
@@ -18,6 +19,7 @@ export function ImageCarousel({
   interval = 4500,
   imgClassName = 'object-cover',
   className,
+  eagerFirst = false,
 }: ImageCarouselProps) {
   const [current, setCurrent] = useState(0)
   // Increments on every slide change so each newly active image gets a fresh key,
@@ -49,6 +51,7 @@ export function ImageCarousel({
             key={i === current ? `${i}-${changeCount}` : i}
             src={slide.src}
             alt={slide.alt}
+            loading={eagerFirst && i === 0 ? 'eager' : 'lazy'}
             className={cn(
               'w-full h-full',
               i === current ? 'animate-carousel-enter' : '',
@@ -65,6 +68,7 @@ export function ImageCarousel({
             key={i}
             onClick={() => { setCurrent(i); setChangeCount((c) => c + 1) }}
             aria-label={`Slide ${i + 1}`}
+            aria-current={i === current ? true : undefined}
             className={cn(
               'h-2 transition-all duration-300',
               i === current

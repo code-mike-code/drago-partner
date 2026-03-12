@@ -1,10 +1,10 @@
 import './BannerSection.css'
 
-import uberLogo from '@/assets/brand-logo/uber.png'
-import boltLogo from '@/assets/brand-logo/bolt.png'
-import freenowLogo from '@/assets/brand-logo/freenow.png'
-import uberFoodsLogo from '@/assets/brand-logo/uber-foods.png'
-import boltFoodLogo from '@/assets/brand-logo/bolt-food.png'
+import uberLogo from '@/assets/brand-logo/uber.webp'
+import boltLogo from '@/assets/brand-logo/bolt.webp'
+import freenowLogo from '@/assets/brand-logo/freenow.webp'
+import uberFoodsLogo from '@/assets/brand-logo/uber-foods.webp'
+import boltFoodLogo from '@/assets/brand-logo/bolt-food.webp'
 
 const PARTNERS = [
   { id: 'uber',     src: uberLogo,      alt: 'Uber' },
@@ -32,6 +32,7 @@ export function BannerSection() {
               src={src}
               alt={alt}
               className="h-32 w-auto object-contain select-none"
+              loading="lazy"
               draggable={false}
             />
           </div>

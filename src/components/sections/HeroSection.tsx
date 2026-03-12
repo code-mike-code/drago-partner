@@ -5,9 +5,9 @@ import { ImageCarousel } from '@/components/ui/ImageCarousel'
 import { WaveText } from '@/components/ui/WaveText'
 import { Reveal } from '@/components/ui/Reveal'
 import { BookingModal } from '@/components/modals/BookingModal'
-import heroTaxi from '@/assets/img/hero-taxi.png'
-import heroTaxi1 from '@/assets/img/hero-taxi-1.png'
-import heroDelivery from '@/assets/img/hero-delivery.png'
+import heroTaxi from '@/assets/img/hero-taxi.webp'
+import heroTaxi1 from '@/assets/img/hero-taxi-1.webp'
+import heroDelivery from '@/assets/img/hero-delivery.webp'
 
 const SLIDES = [
   { src: heroTaxi, alt: 'Kierowca taxi' },
@@ -61,6 +61,7 @@ export function HeroSection() {
               slides={SLIDES}
               imgClassName="object-cover py-24 px-12"
               className="h-full w-full"
+              eagerFirst
             />
           </Reveal>
         </div>

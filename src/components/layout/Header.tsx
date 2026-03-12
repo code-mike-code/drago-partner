@@ -143,7 +143,9 @@ export function Header() {
           {/* Social — separated by grey line */}
           <div className="border-t border-gray-100 pt-4 flex gap-5">
             <a
-              href="#"
+              href="https://www.instagram.com/dragopartnertaxi?igsh=MXd3NzRtbTltcWdncA=="
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Instagram"
               className="text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] flex items-center"
             >
@@ -154,7 +156,9 @@ export function Header() {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/share/1CYoKHcnMd/?mibextid=wwXIfr"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Facebook"
               className="text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] flex items-center"
             >

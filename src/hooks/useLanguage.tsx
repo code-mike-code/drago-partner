@@ -2,6 +2,7 @@ import {
   createContext,
   useContext,
   useState,
+  useEffect,
   useCallback,
   type ReactNode,
 } from 'react'
@@ -46,6 +47,10 @@ const LanguageContext = createContext<LanguageContextType | null>(null)
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>('pl')
+
+  useEffect(() => {
+    document.documentElement.lang = language
+  }, [language])
 
   const setLanguage = useCallback((lang: Language) => {
     setLanguageState(lang)
