@@ -8,6 +8,12 @@ export const pl = {
     cta: 'Aplikuj teraz',
   },
 
+  // SEO Meta
+  meta: {
+    description: 'Drago Partner – partner flotowy Uber, Bolt i FreeNow w Warszawie. Oferujemy wynajem aut, pomoc w uzyskaniu licencji taxi, szkolenia i pełne wsparcie dla kierowców i kurierów.',
+    keywords: 'taxi Warszawa, partner Uber Warszawa, partner Bolt Warszawa, FreeNow Warszawa, Uber Eats Warszawa, Bolt Food Warszawa, praca kierowca Warszawa, wynajem auta do Ubera Warszawa, licencja taxi Warszawa, uprawnienia kierowcy taxi, jak zostać kierowcą Uber, wynajem samochodu Bolt Warszawa, dokumenty taxi Warszawa, korporacja taxi Warszawa, partner taxi warszawa',
+  },
+
   // Hero Section
   hero: {
     badge: 'Rekrutacja kierowców',

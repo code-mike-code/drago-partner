@@ -7,6 +7,12 @@ export const en = {
     cta: 'Apply now',
   },
 
+  // SEO Meta
+  meta: {
+    description: 'Drago Partner – Uber, Bolt and FreeNow fleet partner in Warsaw. We offer car rental, taxi licence support, training and full assistance for drivers and couriers.',
+    keywords: 'taxi Warsaw, Uber partner Warsaw, Bolt partner Warsaw, FreeNow Warsaw, Uber Eats partner Warsaw, Bolt Food Warsaw, taxi driver job Warsaw, car rental for Uber Warsaw, taxi license Warsaw, driver documents Warsaw, how to become Uber driver Warsaw, hire drivers Warsaw',
+  },
+
   hero: {
     badge: 'Driver recruitment',
     title: 'Earn more as a driver',

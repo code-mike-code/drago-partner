@@ -19,7 +19,8 @@ export default function Index() {
     <>
       <Helmet>
         <title>Drago Partner – {t('footer.tagline')}</title>
-        <meta name="description" content={t('hero.subtitle')} />
+        <meta name="description" content={t('meta.description')} />
+        <meta name="keywords" content={t('meta.keywords')} />
       </Helmet>
 
       <Header />
