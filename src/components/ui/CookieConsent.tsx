@@ -7,10 +7,10 @@ function loadGoogleAnalytics(measurementId: string) {
   if (!measurementId || document.getElementById('ga-script')) return
 
   // Initialize dataLayer and gtag function
-  ;(window as Record<string, unknown>).dataLayer =
-    (window as Record<string, unknown>).dataLayer || []
+  const w = window as unknown as Record<string, unknown>
+  w.dataLayer = (w.dataLayer as unknown[]) || []
   function gtag(...args: unknown[]) {
-    ;((window as Record<string, unknown>).dataLayer as unknown[]).push(args)
+    ;(w.dataLayer as unknown[]).push(args)
   }
   gtag('js', new Date())
   gtag('config', measurementId)

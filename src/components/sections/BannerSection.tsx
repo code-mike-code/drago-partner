@@ -31,7 +31,7 @@ export function BannerSection() {
             <img
               src={src}
               alt={alt}
-              className="h-16 w-auto object-contain select-none"
+              className="h-32 w-auto object-contain select-none"
               draggable={false}
             />
           </div>

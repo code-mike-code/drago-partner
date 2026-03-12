@@ -61,7 +61,7 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
             dropdownLayout === 'grid' ? 'grid grid-cols-3 p-1 w-40' : 'w-44 py-1',
           )}
         >
-          {LANGUAGES.map(({ code, flag, label }) => (
+          {LANGUAGES.map(({ code, flag }) => (
             <button
               key={code}
               role="option"
