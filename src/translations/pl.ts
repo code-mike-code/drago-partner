@@ -125,7 +125,7 @@ export const pl = {
     info: {
       phone: '+48 530 181 372',
       phoneNote: 'UA / GR / RUS',
-      email: 'dragopartner@dragopartner.pl',
+      email: 'biuro@dragopartner.pl',
       address: 'Modlińska 310/312 lok. 2, 03-152 Warszawa (Fort Piontek)',
       hours: 'Pon – Pt: 10:00 – 18:00',
     },
