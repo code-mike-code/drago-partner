@@ -4,6 +4,7 @@ import Index from '@/pages/Index'
 import PrivacyPolicy from '@/pages/PrivacyPolicy'
 import TermsOfService from '@/pages/TermsOfService'
 import NotFound from '@/pages/NotFound'
+import { CookieConsent } from '@/components/ui/CookieConsent'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <CookieConsent />
       </BrowserRouter>
     </LanguageProvider>
   )

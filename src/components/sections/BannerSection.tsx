@@ -1,74 +1,39 @@
 import './BannerSection.css'
 
-function Lightning() {
-  return (
-    <svg viewBox="0 0 10 16" fill="currentColor" className="h-4 w-auto shrink-0" aria-hidden="true">
-      <path d="M6 0L0 9h4.5L3 16L10 7H5.5L6 0Z" />
-    </svg>
-  )
-}
+import uberLogo from '@/assets/brand-logo/uber.png'
+import boltLogo from '@/assets/brand-logo/bolt.png'
+import freenowLogo from '@/assets/brand-logo/freenow.png'
+import uberFoodsLogo from '@/assets/brand-logo/uber-foods.png'
+import boltFoodLogo from '@/assets/brand-logo/bolt-food.png'
 
 const PARTNERS = [
-  {
-    id: 'uber',
-    content: (
-      <span className="text-white font-black text-xl tracking-tight whitespace-nowrap">
-        Uber
-      </span>
-    ),
-  },
-  {
-    id: 'bolt',
-    content: (
-      <span className="flex items-center gap-1.5 text-white font-black text-xl tracking-tight whitespace-nowrap">
-        <Lightning />
-        Bolt
-      </span>
-    ),
-  },
-  {
-    id: 'freenow',
-    content: (
-      <span className="text-white font-black text-xl tracking-tight whitespace-nowrap">
-        FREE NOW
-      </span>
-    ),
-  },
-  {
-    id: 'ubereats',
-    content: (
-      <span className="text-white text-xl tracking-tight whitespace-nowrap">
-        <strong className="font-black">Uber</strong>
-        <span className="font-normal opacity-75"> Eats</span>
-      </span>
-    ),
-  },
-  {
-    id: 'bolteats',
-    content: (
-      <span className="flex items-center gap-1.5 text-white text-xl tracking-tight whitespace-nowrap">
-        <Lightning />
-        <span>
-          <strong className="font-black">Bolt</strong>
-          <span className="font-normal opacity-75"> Eats</span>
-        </span>
-      </span>
-    ),
-  },
+  { id: 'uber',     src: uberLogo,      alt: 'Uber' },
+  { id: 'bolt',     src: boltLogo,      alt: 'Bolt' },
+  { id: 'freenow',  src: freenowLogo,   alt: 'FREE NOW' },
+  { id: 'ubereats', src: uberFoodsLogo, alt: 'Uber Eats' },
+  { id: 'boltfood', src: boltFoodLogo,  alt: 'Bolt Food' },
 ]
 
-const TRACK = [...PARTNERS, ...PARTNERS]
+// 4 copies → animation moves -50% = exactly 2 sets.
+// At reset point (−50%) the visible content is identical to position 0 → seamless loop.
+// 4 copies ensures there are always enough items to fill any viewport width.
+const TRACK = [...PARTNERS, ...PARTNERS, ...PARTNERS, ...PARTNERS]
 
 export function BannerSection() {
   return (
-    <section aria-label="Platformy partnerskie" className="bg-grey-mid py-5 overflow-hidden">
-      <div className="marquee-track gap-12" aria-hidden="true">
-        {TRACK.map(({ id, content }, i) => (
-          <div key={`${id}-${i}`} className="flex items-center gap-12 shrink-0">
-            <span className="opacity-80 hover:opacity-100 transition-opacity duration-200">
-              {content}
-            </span>
-            <span className="block w-px h-4 bg-white/25 shrink-0" />
+    <section
+      aria-label="Platformy partnerskie"
+      className="bg-white py-5 overflow-hidden"
+    >
+      <div className="marquee-track" aria-hidden="true">
+        {TRACK.map(({ id, src, alt }, i) => (
+          <div key={`${id}-${i}`} className="flex items-center shrink-0 px-10">
+            <img
+              src={src}
+              alt={alt}
+              className="h-16 w-auto object-contain select-none"
+              draggable={false}
+            />
           </div>
         ))}
       </div>

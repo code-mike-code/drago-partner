@@ -135,6 +135,15 @@ export const pl = {
     modalCancel: 'Anuluj',
   },
 
+  // Cookie Consent
+  cookies: {
+    title: 'Ta strona używa plików cookies',
+    description: 'Używamy plików cookies analitycznych (Google Analytics) do analizy ruchu i ulepszania serwisu. Dane są anonimizowane i nie identyfikują Cię osobiście. Możesz zaakceptować lub odrzucić te pliki.',
+    learnMore: 'Dowiedz się więcej w polityce prywatności →',
+    accept: 'Akceptuję',
+    reject: 'Odrzuć',
+  },
+
   // Footer
   footer: {
     tagline: 'Z Drago Partner pracujesz na własnych zasadach, a my dbamy o formalności, flotę i codzienne wsparcie. Zgłoś się i zacznij współpracę w Warszawie jako kierowca lub kurier już teraz.',

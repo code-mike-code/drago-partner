@@ -126,6 +126,15 @@ export const en = {
     modalCancel: 'Cancel',
   },
 
+  // Cookie Consent
+  cookies: {
+    title: 'This website uses cookies',
+    description: 'We use analytical cookies (Google Analytics) to analyse traffic and improve our service. Data is anonymised and does not identify you personally. You can accept or reject these cookies.',
+    learnMore: 'Learn more in our privacy policy →',
+    accept: 'Accept',
+    reject: 'Reject',
+  },
+
   footer: {
     tagline: 'Professional driver recruitment',
     links: {

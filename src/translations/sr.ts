@@ -126,6 +126,15 @@ export const sr = {
     modalCancel: 'Otkaži',
   },
 
+  // Cookie Consent
+  cookies: {
+    title: 'Ovaj sajt koristi kolačiće',
+    description: 'Koristimo analitičke kolačiće (Google Analytics) za analizu saobraćaja i unapređenje servisa. Podaci su anonimizirani i ne identifikuju vas lično. Možete prihvatiti ili odbiti ove kolačiće.',
+    learnMore: 'Saznajte više u politici privatnosti →',
+    accept: 'Prihvati',
+    reject: 'Odbij',
+  },
+
   footer: {
     tagline: 'Regrutacija profesionalnih vozača',
     links: {
