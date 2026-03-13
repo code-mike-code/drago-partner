@@ -18,7 +18,7 @@ interface LanguageSwitcherProps {
 }
 
 export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownLayout = 'list' }: LanguageSwitcherProps) {
-  const { language, setLanguage } = useLanguage()
+  const { language, setLanguage, t } = useLanguage()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const triggerRef = useRef<HTMLButtonElement>(null)
@@ -56,7 +56,7 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
         className="flex items-center gap-1.5 text-xs font-semibold text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] px-1"
         aria-haspopup="menu"
         aria-expanded={open}
-        aria-label="Select language"
+        aria-label={t('nav.selectLanguage')}
       >
         <Globe size={15} strokeWidth={1.75} />
         <span>{current.code.toUpperCase()}</span>

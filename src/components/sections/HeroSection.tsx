@@ -1,10 +1,10 @@
-import { useState } from 'react'
+// import { useState } from 'react' // TODO: odblokować razem z BookingModal
 import { useLanguage } from '@/hooks/useLanguage'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { ImageCarousel } from '@/components/ui/ImageCarousel'
 import { WaveText } from '@/components/ui/WaveText'
 import { Reveal } from '@/components/ui/Reveal'
-import { BookingModal } from '@/components/modals/BookingModal'
+// import { BookingModal } from '@/components/modals/BookingModal' // TODO: odblokować po podłączeniu Monday CRM (VITE_MONDAY_BOOKING_URL)
 import heroTaxi from '@/assets/img/hero-taxi.webp'
 import heroTaxi1 from '@/assets/img/hero-taxi-1.webp'
 import heroDelivery from '@/assets/img/hero-delivery.webp'
@@ -17,7 +17,7 @@ const SLIDES = [
 
 export function HeroSection() {
   const { t } = useLanguage()
-  const [modalOpen, setModalOpen] = useState(false)
+  // const [modalOpen, setModalOpen] = useState(false) // TODO: odblokować razem z BookingModal
 
   return (
     <>
@@ -74,7 +74,7 @@ export function HeroSection() {
         </div>
       </section>
 
-      <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      {/* <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} /> */}
     </>
   )
 }

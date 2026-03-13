@@ -6,6 +6,7 @@ export const en = {
     contact: 'Contact',
     cta: 'Apply now',
     toggleMenu: 'Open/close menu',
+    selectLanguage: 'Select language',
   },
 
   common: {

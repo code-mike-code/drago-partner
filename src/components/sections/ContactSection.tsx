@@ -2,13 +2,13 @@ import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock } from 'lucide-react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { CTAButton } from '@/components/ui/CTAButton'
-import { BookingModal } from '@/components/modals/BookingModal'
+// import { BookingModal } from '@/components/modals/BookingModal' // TODO: odblokować po podłączeniu Monday CRM (VITE_MONDAY_BOOKING_URL)
 import { MapPopover } from '@/components/ui/MapPopover'
 import { Reveal } from '@/components/ui/Reveal'
 
 export function ContactSection() {
   const { t } = useLanguage()
-  const [modalOpen, setModalOpen] = useState(false)
+  // const [modalOpen, setModalOpen] = useState(false) // TODO: odblokować razem z BookingModal
   const [mapOpen, setMapOpen] = useState(false)
 
   const phone = t('contact.info.phone')
@@ -127,7 +127,7 @@ export function ContactSection() {
         </div>
       </section>
 
-      <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} />
+      {/* <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} /> */}
       <MapPopover address={address} open={mapOpen} onClose={() => setMapOpen(false)} />
     </>
   )

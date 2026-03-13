@@ -7,6 +7,7 @@ export const pl = {
     contact: 'Kontakt',
     cta: 'Aplikuj teraz',
     toggleMenu: 'Otwórz/zamknij menu',
+    selectLanguage: 'Wybierz język',
   },
 
   common: {

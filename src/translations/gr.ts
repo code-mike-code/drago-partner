@@ -6,6 +6,7 @@ export const gr = {
     contact: 'კონტაქტი',
     cta: 'განაცხადი',
     toggleMenu: 'მენიუს გახსნა/დახურვა',
+    selectLanguage: 'ენის არჩევა',
   },
 
   common: {

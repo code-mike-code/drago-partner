@@ -6,6 +6,7 @@ export const sr = {
     contact: 'Kontakt',
     cta: 'Prijavi se',
     toggleMenu: 'Otvori/zatvori meni',
+    selectLanguage: 'Odaberi jezik',
   },
 
   common: {

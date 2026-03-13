@@ -6,6 +6,7 @@ export const ua = {
     contact: 'Контакт',
     cta: 'Подати заявку',
     toggleMenu: 'Відкрити/закрити меню',
+    selectLanguage: 'Вибрати мову',
   },
 
   common: {
