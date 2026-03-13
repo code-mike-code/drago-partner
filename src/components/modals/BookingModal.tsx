@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -9,6 +11,10 @@ interface BookingModalProps {
 
 export function BookingModal({ open, onClose }: BookingModalProps) {
   const { t } = useLanguage()
+  const modalRef = useRef<HTMLDivElement>(null)
+
+  // Hooks must be called before any conditional return (Rules of Hooks)
+  useFocusTrap(modalRef, open, onClose)
 
   const handleConfirm = () => {
     onClose()
@@ -38,8 +44,9 @@ export function BookingModal({ open, onClose }: BookingModalProps) {
         aria-hidden="true"
       />
 
-      {/* Panel */}
+      {/* Panel — focus trap is scoped to this element */}
       <div
+        ref={modalRef}
         className={cn(
           'relative bg-white w-full max-w-md p-8',
           'shadow-2xl',
@@ -48,7 +55,7 @@ export function BookingModal({ open, onClose }: BookingModalProps) {
         <button
           onClick={onClose}
           className="absolute top-4 right-4 p-2 text-grey-mid hover:text-dark transition-colors"
-          aria-label="Close"
+          aria-label="Zamknij"
         >
           <X size={18} />
         </button>

@@ -33,19 +33,3 @@ export function useScrollReveal<T extends HTMLElement = HTMLDivElement>(
   return { ref, isVisible }
 }
 
-/**
- * Keeps the animation class always present so the element stays at the "from"
- * keyframe (opacity:0, translateY/scale) via fill-mode:both + paused state.
- * On scroll, we only flip play-state to "running" — no class blink possible.
- */
-export function revealText(isVisible: boolean): string {
-  return isVisible
-    ? 'animate-slide-up [animation-play-state:running]'
-    : 'animate-slide-up [animation-play-state:paused]'
-}
-
-export function revealImage(isVisible: boolean): string {
-  return isVisible
-    ? 'animate-scale-in [animation-play-state:running]'
-    : 'animate-scale-in [animation-play-state:paused]'
-}

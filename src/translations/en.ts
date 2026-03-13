@@ -112,6 +112,8 @@ export const en = {
     success: 'Thank you! We will get back to you within 24 hours.',
     error: 'Something went wrong. Please try again or call us.',
     required: 'This field is required',
+    emailInvalid: 'Please enter a valid email address',
+    phoneInvalid: 'Please enter a valid phone number (min. 7 digits)',
   },
 
   contact: {

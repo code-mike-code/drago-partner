@@ -98,6 +98,14 @@
   padding: 1rem 2rem;
 }
 
+/* Forced colors mode (Windows High Contrast) — ensure focus is always visible */
+@media (forced-colors: active) {
+  .cta-btn:focus-visible {
+    outline: 2px solid ButtonText;
+    outline-offset: 2px;
+  }
+}
+
 /* Disabled */
 .cta-btn:disabled {
   opacity: 0.7;

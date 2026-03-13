@@ -55,8 +55,7 @@ export function WaveText({
 
   // useRef must always be called (Rules of Hooks) — used only in onMount mode
   const mountRef = useRef<HTMLElement>(null)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const tagRef = onMount ? mountRef : (scrollRef as React.RefObject<any>)
+  const tagRef = onMount ? mountRef : (scrollRef as React.RefObject<HTMLElement>)
 
   const words = text.split(' ')
   let charIndex = 0

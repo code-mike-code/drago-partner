@@ -21,9 +21,11 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
   const { language, setLanguage } = useLanguage()
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
+  const triggerRef = useRef<HTMLButtonElement>(null)
 
   const current = LANGUAGES.find((l) => l.code === language)!
 
+  // Close on click outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
@@ -34,9 +36,22 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  // Close on Escape and restore focus to trigger
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === 'Escape' && open) {
+        setOpen(false)
+        triggerRef.current?.focus()
+      }
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [open])
+
   return (
     <div ref={ref} className={cn('relative', className)}>
       <button
+        ref={triggerRef}
         onClick={() => setOpen((prev) => !prev)}
         className="flex items-center gap-1.5 text-xs font-semibold text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] px-1"
         aria-haspopup="listbox"

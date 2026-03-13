@@ -1,10 +1,11 @@
+import { useMemo } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Reveal } from '@/components/ui/Reveal'
 
 export function ServicesSection() {
   const { t } = useLanguage()
 
-  const items = [
+  const items = useMemo(() => [
     {
       number: t('services.item1.number'),
       title: t('services.item1.title'),
@@ -30,7 +31,7 @@ export function ServicesSection() {
       title: t('services.item5.title'),
       description: t('services.item5.description'),
     },
-  ]
+  ], [t])
 
   return (
     <section id="services" className="py-24 md:py-32 lg:py-40 bg-ghost-white">

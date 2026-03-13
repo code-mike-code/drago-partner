@@ -1,5 +1,7 @@
+import { useRef } from 'react'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
+import { useFocusTrap } from '@/hooks/useFocusTrap'
 
 interface MapPopoverProps {
   address: string
@@ -8,6 +10,11 @@ interface MapPopoverProps {
 }
 
 export function MapPopover({ address, open, onClose }: MapPopoverProps) {
+  const sheetRef = useRef<HTMLDivElement>(null)
+  // MapPopover is always mounted (CSS animation), so the hook reacts to open changes.
+  // Note: cross-origin iframe is not focusable — focus lands on the close button.
+  useFocusTrap(sheetRef, open, onClose)
+
   const encodedAddress = encodeURIComponent(address)
 
   return (
@@ -24,6 +31,7 @@ export function MapPopover({ address, open, onClose }: MapPopoverProps) {
 
       {/* Bottom sheet */}
       <div
+        ref={sheetRef}
         className={cn(
           'fixed bottom-0 left-0 right-0 z-50 bg-white transition-transform duration-300',
           open ? 'translate-y-0' : 'translate-y-full',

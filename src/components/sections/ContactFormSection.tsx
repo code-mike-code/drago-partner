@@ -28,11 +28,24 @@ interface FormErrors {
 
 const INITIAL: FormData = { name: '', email: '', phone: '', city: '', car: '', gdpr: false }
 
-function validate(data: FormData, required: string): FormErrors {
+function validate(
+  data: FormData,
+  required: string,
+  emailInvalid: string,
+  phoneInvalid: string,
+): FormErrors {
   const errors: FormErrors = {}
   if (!data.name.trim()) errors.name = required
-  if (!data.email.trim()) errors.email = required
-  if (!data.phone.trim()) errors.phone = required
+  if (!data.email.trim()) {
+    errors.email = required
+  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+    errors.email = emailInvalid
+  }
+  if (!data.phone.trim()) {
+    errors.phone = required
+  } else if (!/^[\d\s+\-()]{7,}$/.test(data.phone)) {
+    errors.phone = phoneInvalid
+  }
   if (!data.city.trim()) errors.city = required
   if (!data.car) errors.car = required
   if (!data.gdpr) errors.gdpr = required
@@ -55,7 +68,7 @@ export function ContactFormSection() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    const newErrors = validate(form, t('form.required'))
+    const newErrors = validate(form, t('form.required'), t('form.emailInvalid'), t('form.phoneInvalid'))
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors)
       return
@@ -77,7 +90,8 @@ export function ContactFormSection() {
       setStatus('success')
       setForm(INITIAL)
       setErrors({})
-    } catch {
+    } catch (err) {
+      console.error('[ContactForm] EmailJS error:', err)
       setStatus('error')
     }
   }
@@ -134,8 +148,14 @@ export function ContactFormSection() {
                       onChange={handleChange}
                       placeholder={t('form.namePlaceholder')}
                       className={inputClass(errors.name)}
+                      aria-invalid={errors.name ? true : undefined}
+                      aria-describedby={errors.name ? 'name-error' : undefined}
                     />
-                    {errors.name && <p className="mt-1 text-xs text-red-500">{errors.name}</p>}
+                    {errors.name && (
+                      <p id="name-error" role="alert" className="mt-1 text-xs text-red-500">
+                        {errors.name}
+                      </p>
+                    )}
                   </div>
                 </Reveal>
 
@@ -154,8 +174,14 @@ export function ContactFormSection() {
                       onChange={handleChange}
                       placeholder={t('form.emailPlaceholder')}
                       className={inputClass(errors.email)}
+                      aria-invalid={errors.email ? true : undefined}
+                      aria-describedby={errors.email ? 'email-error' : undefined}
                     />
-                    {errors.email && <p className="mt-1 text-xs text-red-500">{errors.email}</p>}
+                    {errors.email && (
+                      <p id="email-error" role="alert" className="mt-1 text-xs text-red-500">
+                        {errors.email}
+                      </p>
+                    )}
                   </div>
                 </Reveal>
 
@@ -175,8 +201,14 @@ export function ContactFormSection() {
                         onChange={handleChange}
                         placeholder={t('form.phonePlaceholder')}
                         className={inputClass(errors.phone)}
+                        aria-invalid={errors.phone ? true : undefined}
+                        aria-describedby={errors.phone ? 'phone-error' : undefined}
                       />
-                      {errors.phone && <p className="mt-1 text-xs text-red-500">{errors.phone}</p>}
+                      {errors.phone && (
+                        <p id="phone-error" role="alert" className="mt-1 text-xs text-red-500">
+                          {errors.phone}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label htmlFor="city" className={labelClass}>
@@ -191,16 +223,26 @@ export function ContactFormSection() {
                         onChange={handleChange}
                         placeholder={t('form.cityPlaceholder')}
                         className={inputClass(errors.city)}
+                        aria-invalid={errors.city ? true : undefined}
+                        aria-describedby={errors.city ? 'city-error' : undefined}
                       />
-                      {errors.city && <p className="mt-1 text-xs text-red-500">{errors.city}</p>}
+                      {errors.city && (
+                        <p id="city-error" role="alert" className="mt-1 text-xs text-red-500">
+                          {errors.city}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </Reveal>
 
                 {/* Car option */}
                 <Reveal delay={300}>
-                  <div>
-                    <p className={labelClass}>{t('form.car')}</p>
+                  <div
+                    role="group"
+                    aria-labelledby="car-label"
+                    aria-describedby={errors.car ? 'car-error' : undefined}
+                  >
+                    <p id="car-label" className={labelClass}>{t('form.car')}</p>
                     <div className="flex flex-col sm:flex-row gap-3">
                       {(['own', 'rent'] as const).map((option) => {
                         const label = option === 'own' ? t('form.carOwn') : t('form.carRent')
@@ -236,7 +278,11 @@ export function ContactFormSection() {
                         )
                       })}
                     </div>
-                    {errors.car && <p className="mt-1 text-xs text-red-500">{errors.car}</p>}
+                    {errors.car && (
+                      <p id="car-error" role="alert" className="mt-1 text-xs text-red-500">
+                        {errors.car}
+                      </p>
+                    )}
                   </div>
                 </Reveal>
 
@@ -246,10 +292,13 @@ export function ContactFormSection() {
                     <label className="flex items-start gap-3 cursor-pointer group">
                       <input
                         type="checkbox"
+                        id="gdpr"
                         name="gdpr"
                         checked={form.gdpr}
                         onChange={handleChange}
                         className="sr-only"
+                        aria-invalid={errors.gdpr ? true : undefined}
+                        aria-describedby={errors.gdpr ? 'gdpr-error' : undefined}
                       />
                       <span
                         className={cn(
@@ -258,20 +307,24 @@ export function ContactFormSection() {
                         )}
                       >
                         {form.gdpr && (
-                          <svg width="10" height="8" viewBox="0 0 10 8" fill="none">
+                          <svg width="10" height="8" viewBox="0 0 10 8" fill="none" aria-hidden="true">
                             <path d="M1 4L3.5 6.5L9 1" stroke="#f5df4d" strokeWidth="1.5" strokeLinecap="square" />
                           </svg>
                         )}
                       </span>
                       <span className="text-xs text-grey-mid leading-relaxed">{t('form.gdpr')}</span>
                     </label>
-                    {errors.gdpr && <p className="mt-1 text-xs text-red-500">{errors.gdpr}</p>}
+                    {errors.gdpr && (
+                      <p id="gdpr-error" role="alert" className="mt-1 text-xs text-red-500">
+                        {errors.gdpr}
+                      </p>
+                    )}
                   </div>
                 </Reveal>
 
                 {/* Error banner */}
                 {status === 'error' && (
-                  <div className="flex items-center gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                  <div className="flex items-center gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
                     <AlertCircle size={16} className="shrink-0" />
                     {t('form.error')}
                   </div>

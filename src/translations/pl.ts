@@ -120,6 +120,8 @@ export const pl = {
     success: 'Dziękujemy! Odezwiemy się do Ciebie w ciągu 24 godzin.',
     error: 'Coś poszło nie tak. Spróbuj ponownie lub zadzwoń do nas.',
     required: 'To pole jest wymagane',
+    emailInvalid: 'Podaj prawidłowy adres e-mail',
+    phoneInvalid: 'Podaj prawidłowy numer telefonu (min. 7 cyfr)',
   },
 
   // Contact Section

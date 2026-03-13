@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useLanguage } from '@/hooks/useLanguage'
 
 const CONSENT_KEY = 'drago_cookie_consent'
@@ -27,6 +27,14 @@ export function CookieConsent() {
   const { t } = useLanguage()
   const [visible, setVisible] = useState(false)
   const measurementId = (import.meta.env.VITE_GA_MEASUREMENT_ID as string) ?? ''
+  const acceptButtonRef = useRef<HTMLButtonElement>(null)
+
+  // Move focus to the Accept button when banner appears (ARIA dialog requirement)
+  useEffect(() => {
+    if (visible) {
+      acceptButtonRef.current?.focus()
+    }
+  }, [visible])
 
   useEffect(() => {
     const consent = localStorage.getItem(CONSENT_KEY)
@@ -84,6 +92,7 @@ export function CookieConsent() {
             {t('cookies.reject')}
           </button>
           <button
+            ref={acceptButtonRef}
             onClick={handleAccept}
             className="px-6 py-2.5 text-sm font-semibold text-black bg-[#f5df4d] hover:bg-[#f0d800] transition-colors duration-150 min-h-[44px]"
           >

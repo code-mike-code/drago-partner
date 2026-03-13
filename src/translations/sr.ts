@@ -112,6 +112,8 @@ export const sr = {
     success: 'Hvala! Javićemo vam se u roku od 24 sata.',
     error: 'Nešto je pošlo naopako. Pokušajte ponovo ili nas pozovite.',
     required: 'Ovo polje je obavezno',
+    emailInvalid: 'Unesite ispravnu e-mail adresu',
+    phoneInvalid: 'Unesite ispravan broj telefona (min. 7 cifara)',
   },
 
   contact: {
