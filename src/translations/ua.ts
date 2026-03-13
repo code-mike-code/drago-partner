@@ -5,6 +5,12 @@ export const ua = {
     faq: 'FAQ',
     contact: 'Контакт',
     cta: 'Подати заявку',
+    toggleMenu: 'Відкрити/закрити меню',
+  },
+
+  common: {
+    close: 'Закрити',
+    closeMap: 'Закрити карту',
   },
 
   // SEO Meta

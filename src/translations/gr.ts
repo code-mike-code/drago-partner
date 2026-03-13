@@ -5,6 +5,12 @@ export const gr = {
     faq: 'კითხვები',
     contact: 'კონტაქტი',
     cta: 'განაცხადი',
+    toggleMenu: 'მენიუს გახსნა/დახურვა',
+  },
+
+  common: {
+    close: 'დახურვა',
+    closeMap: 'რუკის დახურვა',
   },
 
   // SEO Meta

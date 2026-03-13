@@ -47,11 +47,18 @@ export function HeroSection() {
                   {t('hero.ctaPrimary')}
                 </CTAButton>
               </Reveal>
-              <Reveal delay={420}>
+
+              {/*
+              ── PRZYCISK REZERWACJI WIZYTY (Monday CRM) ─────────────────────
+              Odkomentuj gdy VITE_MONDAY_BOOKING_URL zostanie skonfigurowany
+              w pliku .env i przetestowany z kalendarzem Monday CRM.
+              Patrz instrukcja w: src/components/modals/BookingModal.tsx
+              ──────────────────────────────────────────────────────────────── */}
+              {/* <Reveal delay={420}>
                 <CTAButton onClick={() => setModalOpen(true)} variant="dark">
                   {t('contact.ctaSecondary')}
                 </CTAButton>
-              </Reveal>
+              </Reveal> */}
             </div>
           </div>
 

@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { X } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useFocusTrap } from '@/hooks/useFocusTrap'
+import { useLanguage } from '@/hooks/useLanguage'
 
 interface MapPopoverProps {
   address: string
@@ -10,6 +11,7 @@ interface MapPopoverProps {
 }
 
 export function MapPopover({ address, open, onClose }: MapPopoverProps) {
+  const { t } = useLanguage()
   const sheetRef = useRef<HTMLDivElement>(null)
   // MapPopover is always mounted (CSS animation), so the hook reacts to open changes.
   // Note: cross-origin iframe is not focusable — focus lands on the close button.
@@ -45,7 +47,7 @@ export function MapPopover({ address, open, onClose }: MapPopoverProps) {
           <button
             onClick={onClose}
             className="shrink-0 p-1 text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] min-w-[44px] flex items-center justify-center"
-            aria-label="Zamknij mapę"
+            aria-label={t('common.closeMap')}
           >
             <X size={18} />
           </button>
@@ -56,7 +58,6 @@ export function MapPopover({ address, open, onClose }: MapPopoverProps) {
               title="Lokalizacja"
               width="100%"
               height="100%"
-              frameBorder="0"
               style={{ border: 0 }}
               src={`https://maps.google.com/maps?q=${encodedAddress}&output=embed&hl=pl`}
               allowFullScreen

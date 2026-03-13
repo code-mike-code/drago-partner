@@ -6,6 +6,12 @@ export const pl = {
     faq: 'FAQ',
     contact: 'Kontakt',
     cta: 'Aplikuj teraz',
+    toggleMenu: 'Otwórz/zamknij menu',
+  },
+
+  common: {
+    close: 'Zamknij',
+    closeMap: 'Zamknij mapę',
   },
 
   // SEO Meta

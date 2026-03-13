@@ -5,6 +5,12 @@ export const sr = {
     faq: 'FAQ',
     contact: 'Kontakt',
     cta: 'Prijavi se',
+    toggleMenu: 'Otvori/zatvori meni',
+  },
+
+  common: {
+    close: 'Zatvori',
+    closeMap: 'Zatvori mapu',
   },
 
   // SEO Meta

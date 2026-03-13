@@ -5,6 +5,12 @@ export const en = {
     faq: 'FAQ',
     contact: 'Contact',
     cta: 'Apply now',
+    toggleMenu: 'Open/close menu',
+  },
+
+  common: {
+    close: 'Close',
+    closeMap: 'Close map',
   },
 
   // SEO Meta

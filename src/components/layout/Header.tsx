@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { Menu, X } from 'lucide-react'
 import { NavLink } from '@/components/NavLink'
 import { LanguageSwitcher } from '@/components/LanguageSwitcher'
 import { CTAButton } from '@/components/ui/CTAButton'
 import { useLanguage } from '@/hooks/useLanguage'
 import { cn } from '@/lib/utils'
-import logoDark from '@/assets/logo/logo-inline-dark.png'
+import logoDark from '@/assets/logo/logo-inline-dark.webp'
 
 export function Header() {
   const { t } = useLanguage()
@@ -13,12 +13,12 @@ export function Header() {
 
   const phone = t('contact.info.phone')
 
-  const navItems = [
+  const navItems = useMemo(() => [
     { href: '#about', label: t('nav.about') },
     { href: '#services', label: t('nav.services') },
     { href: '#faq', label: t('nav.faq') },
     { href: '#contact', label: t('nav.contact') },
-  ]
+  ], [t])
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
@@ -78,7 +78,7 @@ export function Header() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center text-dark"
-            aria-label="Toggle menu"
+            aria-label={t('nav.toggleMenu')}
             aria-expanded={mobileOpen}
           >
             {mobileOpen ? <X size={20} /> : <Menu size={20} />}

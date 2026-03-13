@@ -94,9 +94,16 @@ export function ContactSection() {
                   <CTAButton href="#contact-form" variant="yellow">
                     {t('contact.ctaPrimary')}
                   </CTAButton>
-                  <CTAButton onClick={() => setModalOpen(true)} variant="dark">
+
+                  {/*
+                  ── PRZYCISK REZERWACJI WIZYTY (Monday CRM) ──────────────────
+                  Odkomentuj gdy VITE_MONDAY_BOOKING_URL zostanie skonfigurowany
+                  w pliku .env i przetestowany z kalendarzem Monday CRM.
+                  Patrz instrukcja w: src/components/modals/BookingModal.tsx
+                  ─────────────────────────────────────────────────────────── */}
+                  {/* <CTAButton onClick={() => setModalOpen(true)} variant="dark">
                     {t('contact.ctaSecondary')}
-                  </CTAButton>
+                  </CTAButton> */}
                 </div>
               </Reveal>
             </div>

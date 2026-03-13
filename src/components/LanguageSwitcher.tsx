@@ -54,7 +54,7 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
         ref={triggerRef}
         onClick={() => setOpen((prev) => !prev)}
         className="flex items-center gap-1.5 text-xs font-semibold text-grey-mid hover:text-dark transition-colors duration-200 min-h-[44px] px-1"
-        aria-haspopup="listbox"
+        aria-haspopup="menu"
         aria-expanded={open}
         aria-label="Select language"
       >
@@ -69,7 +69,7 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
 
       {open && (
         <div
-          role="listbox"
+          role="menu"
           className={cn(
             'absolute top-full mt-1 bg-white border border-gray-100 shadow-lg z-50',
             dropdownAlign === 'right' ? 'right-0' : 'left-0',
@@ -79,8 +79,8 @@ export function LanguageSwitcher({ className, dropdownAlign = 'right', dropdownL
           {LANGUAGES.map(({ code, flag }) => (
             <button
               key={code}
-              role="option"
-              aria-selected={language === code}
+              role="menuitemradio"
+              aria-checked={language === code}
               onClick={() => { setLanguage(code); setOpen(false) }}
               className={cn(
                 'flex items-center transition-colors duration-150',
