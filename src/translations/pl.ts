@@ -45,6 +45,26 @@ export const pl = {
   services: {
     heading: 'Co oferujemy',
     subheading: 'Kompleksowe wsparcie na każdym etapie',
+    offerHeading: 'Oferta',
+    cards: {
+      taxi: {
+        title: 'Kierowca Taxi',
+        description: 'Zostań kierowcą Uber, Bolt lub FreeNow w Warszawie z pełnym wsparciem Drago Partner. Pomożemy Ci uzyskać licencję taxi, skompletować dokumenty i szybko rozpocząć legalną pracę. Stabilne zarobki, elastyczny grafik i sprawdzony partner flotowy od pierwszego dnia.',
+        salaryLabel: 'Średnie wynagrodzenie',
+        salaryValue: 'od 9 000 zł',
+      },
+      courier: {
+        title: 'Kurier',
+        description: 'Pracuj jako kurier Uber Eats lub Bolt Food w Warszawie – elastyczny grafik i atrakcyjne wynagrodzenie. Drago Partner zapewnia pełne wsparcie przy rejestracji, szkoleniu i codziennej pracy. Zacznij zarabiać jako kurier w Warszawie już dziś.',
+        salaryLabel: 'Średnie wynagrodzenie',
+        salaryValue: 'od 6 000 zł',
+      },
+      rental: {
+        title: 'Wynajem samochodów',
+        description: 'Wynajem samochodów dla kierowców Uber, Bolt i FreeNow w Warszawie. Drago Partner oferuje nowoczesne auta z własnej floty – bez zakupu własnego pojazdu. Wybierz wynajem auta i zacznij pracę jako kierowca taxi lub kurier w Warszawie nawet jutro.',
+      },
+    },
+    disclaimer: 'Powyższe informacje mają charakter informacyjny i nie stanowią oferty handlowej w rozumieniu art. 66 §1 Kodeksu cywilnego. Prezentowane treści są zaproszeniem do zawarcia umowy zgodnie z art. 71 KC.',
     item1: {
       number: '01',
       title: 'Rejestracja i dokumenty',
@@ -85,24 +105,28 @@ export const pl = {
     heading: 'Najczęstsze pytania',
     items: [
       {
-        question: 'Jakie dokumenty są potrzebne do rejestracji?',
-        answer: 'Do rejestracji potrzebujesz: dowód osobisty lub paszport, prawo jazdy kategorii B (min. 3 lata), zaświadczenie o niekaralności, badania lekarskie i psychotechniczne.',
+        question: 'Jakich dokumentów potrzebuję, aby pracować jako kierowca taxi w Polsce?',
+        answer: '• Polskie prawo jazdy.\n• Samochód osobowy z wypisem z licencji spełniającym wymagania poszczególnych platform.\n• Komplet dokumentów: dowód osobisty lub paszport, polskie prawo jazdy, orzeczenie lekarskie i psychologiczne, zaświadczenie o niekaralności – polskie oraz kraju obywatelstwa (tłumaczenie przysięgłe), nie starsze niż 30 dni.\n• Rejestracja konta na platformach i przejście weryfikacji w biurach poszczególnych platform.',
       },
       {
-        question: 'Ile mogę zarobić jako kierowca?',
-        answer: 'Zarobki zależą od liczby przepracowanych godzin i wybranej platformy. Aktywni kierowcy zarabiają średnio od 5 000 do 9 000 zł miesięcznie netto.',
+        question: 'Jak rozpocząć współpracę?',
+        answer: '1. Wypełnij formularz zgłoszeniowy, aby rozpocząć współpracę i nawiązać z nami kontakt.\n2. Umów się na spotkanie w celu dostarczenia dokumentów – oryginały oraz kopie.',
       },
       {
-        question: 'Czy muszę mieć własny samochód?',
-        answer: 'Nie jest to wymagane. Pomagamy w znalezieniu opcji leasingu lub wynajmu pojazdu odpowiedniego do przewozów.',
+        question: 'Wymagania dotyczące pojazdu?',
+        answer: 'Uber\n• Warszawa: samochód z 2005 roku lub nowszy; pozostałe miasta: 2004 lub nowszy.\n• Zarejestrowany w Polsce.\n• Ważne ubezpieczenie i przegląd techniczny.\n• Pieczątka z przeglądu taxi w dowodzie rejestracyjnym i ważny wypis z licencji taxi partnera.\n• Oznakowanie zgodne z przepisami miasta.\n• 4–5 drzwi, minimum 5 miejsc siedzących.\n• Kierownica po lewej stronie.\n\nBolt\n• Samochód z 2005 roku lub nowszy, zarejestrowany w Polsce.\n• Pieczątka z przeglądu taxi i ważny wypis z licencji taxi partnera.\n• Oznakowanie zgodne z przepisami miasta.\n\nFreeNow\n• Samochód z 2007 roku lub nowszy, zarejestrowany w Polsce.\n• Pieczątka z przeglądu taxi i ważny wypis z licencji taxi partnera.\n• Oznakowanie zgodne z przepisami miasta.\n• Ważne ubezpieczenie i przegląd techniczny.',
       },
       {
-        question: 'Jak długo trwa proces rejestracji?',
-        answer: 'Standardowy proces rejestracji trwa od 3 do 7 dni roboczych, w zależności od kompletności dokumentacji.',
+        question: 'Czy muszę znać język polski, aby rozpocząć pracę?',
+        answer: 'Język polski nie jest obowiązkowy, ale zalecamy znać podstawy języka dla lepszej komunikacji z klientami.',
       },
       {
-        question: 'Czy oferujecie wsparcie w języku ukraińskim lub angielskim?',
-        answer: 'Tak. Nasz zespół obsługuje kierowców w języku polskim, angielskim, ukraińskim, serbskim i gruzińskim.',
+        question: 'Jak wygląda proces uzyskania wypisu z licencji i identyfikatora?',
+        answer: '1. Skontaktuj się z naszym biurem obsługi w celu skompletowania niezbędnych dokumentów.\n2. Pomożemy Ci przejść przez cały proces rejestracji, abyś mógł rozpocząć pracę jak najszybciej.\n\nJeśli masz dodatkowe pytania, skontaktuj się z naszym biurem obsługi – pomożemy Ci z całym procesem.',
+      },
+      {
+        question: 'Czy mogę pracować jednocześnie na kilku platformach?',
+        answer: 'Tak, możesz pracować na wielu platformach jednocześnie, co pozwoli Ci zwiększyć zarobki. Przygotujemy Cię do pracy z każdą platformą.',
       },
     ],
   },

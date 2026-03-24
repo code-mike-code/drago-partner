@@ -22,14 +22,14 @@ const AccordionTrigger = ({
   <AccordionPrimitive.Header className="flex">
     <AccordionPrimitive.Trigger
       className={cn(
-        'flex flex-1 items-center justify-between py-5 text-left text-base font-semibold text-dark transition-all hover:text-grey-mid [&[data-state=open]>svg]:rotate-180',
+        'flex flex-1 items-center justify-between py-6 text-left text-xl font-bold text-dark transition-all hover:text-grey-mid [&[data-state=open]>svg]:rotate-180',
         className,
       )}
       {...props}
     >
       {children}
       <ChevronDown
-        size={16}
+        size={22}
         className="shrink-0 text-grey-mid transition-transform duration-200"
       />
     </AccordionPrimitive.Trigger>
@@ -45,7 +45,7 @@ const AccordionContent = ({
     className="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
     {...props}
   >
-    <div className={cn('pb-5 pt-0 text-grey-mid leading-relaxed', className)}>
+    <div className={cn('pb-6 pt-0 text-base text-grey-mid leading-relaxed', className)}>
       {children}
     </div>
   </AccordionPrimitive.Content>

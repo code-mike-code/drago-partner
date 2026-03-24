@@ -39,6 +39,26 @@ export const en = {
   services: {
     heading: 'What we offer',
     subheading: 'Comprehensive support at every stage',
+    offerHeading: 'Our Offer',
+    cards: {
+      taxi: {
+        title: 'Taxi Driver',
+        description: 'Become an Uber, Bolt or FreeNow driver in Warsaw with full support from Drago Partner. We help you obtain a taxi licence, prepare all documents and start legal work fast. Stable income, flexible schedule and a trusted fleet partner from day one.',
+        salaryLabel: 'Average salary',
+        salaryValue: 'from 9,000 PLN',
+      },
+      courier: {
+        title: 'Courier',
+        description: 'Work as an Uber Eats or Bolt Food courier in Warsaw – flexible hours and attractive pay. Drago Partner provides full support with registration, training and daily operations. Start earning as a courier in Warsaw today.',
+        salaryLabel: 'Average salary',
+        salaryValue: 'from 6,000 PLN',
+      },
+      rental: {
+        title: 'Car Rental',
+        description: 'Car rental for Uber, Bolt and FreeNow drivers in Warsaw. Drago Partner offers modern vehicles from our own fleet – no need to buy your own car. Choose a rental and start working as a taxi driver or courier in Warsaw as soon as tomorrow.',
+      },
+    },
+    disclaimer: 'The above information is for informational purposes only and does not constitute a commercial offer within the meaning of Art. 66 §1 of the Civil Code. The presented content is an invitation to enter into a contract pursuant to Art. 71 CC.',
     item1: {
       number: '01',
       title: 'Registration & documents',
@@ -78,24 +98,28 @@ export const en = {
     heading: 'Frequently asked questions',
     items: [
       {
-        question: 'What documents are needed for registration?',
-        answer: 'You need: ID card or passport, category B driving licence (min. 3 years), criminal record certificate, medical and psychotechnical tests.',
+        question: 'What documents do I need to work as a taxi driver in Poland?',
+        answer: '• Polish driving licence.\n• A passenger vehicle with a fleet partner licence supplement meeting the requirements of each platform.\n• Full set of documents: ID card or passport, Polish driving licence, medical and psychological certificate, criminal record certificate – Polish and from your country of citizenship (sworn translation), not older than 30 days.\n• Account registration on the platforms and verification at the offices of each platform.',
       },
       {
-        question: 'How much can I earn as a driver?',
-        answer: 'Earnings depend on hours worked and the chosen platform. Active drivers earn on average 5,000 to 9,000 PLN net per month.',
+        question: 'How do I start working with you?',
+        answer: '1. Fill out the application form to start the cooperation and get in touch with us.\n2. Schedule a meeting to deliver your documents – originals and copies.',
       },
       {
-        question: 'Do I need my own car?',
-        answer: 'It is not required. We help find leasing or vehicle rental options suitable for ride-hailing.',
+        question: 'Vehicle requirements?',
+        answer: 'Uber\n• Warsaw: vehicle from 2005 or newer; other cities: 2004 or newer.\n• Registered in Poland.\n• Valid insurance and technical inspection.\n• Taxi inspection stamp in the vehicle registration document and a valid taxi partner licence supplement.\n• Vehicle marking in accordance with city regulations.\n• 4–5 doors, minimum 5 seats.\n• Left-hand drive.\n\nBolt\n• Vehicle from 2005 or newer, registered in Poland.\n• Taxi inspection stamp and valid taxi partner licence supplement.\n• Vehicle marking in accordance with city regulations.\n\nFreeNow\n• Vehicle from 2007 or newer, registered in Poland.\n• Taxi inspection stamp and valid taxi partner licence supplement.\n• Vehicle marking in accordance with city regulations.\n• Valid insurance and technical inspection.',
       },
       {
-        question: 'How long does the registration process take?',
-        answer: 'The standard registration process takes 3 to 7 business days, depending on the completeness of your documentation.',
+        question: 'Do I need to speak Polish to start working?',
+        answer: 'Polish is not mandatory, but we recommend knowing the basics for better communication with passengers.',
       },
       {
-        question: 'Do you offer support in Ukrainian or English?',
-        answer: 'Yes. Our team serves drivers in Polish, English, Ukrainian, Serbian and Georgian.',
+        question: 'What does the process of obtaining a licence supplement and driver ID look like?',
+        answer: '1. Contact our customer service office to gather all necessary documents.\n2. We will guide you through the entire registration process so you can start working as soon as possible.\n\nIf you have any additional questions, contact our customer service office – we will help you with the entire process.',
+      },
+      {
+        question: 'Can I work on multiple platforms at the same time?',
+        answer: 'Yes, you can work on multiple platforms simultaneously, which will help you increase your earnings. We will prepare you for working with each platform.',
       },
     ],
   },

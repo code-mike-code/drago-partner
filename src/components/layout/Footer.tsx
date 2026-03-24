@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from 'lucide-react'
 import { useLanguage } from '@/hooks/useLanguage'
 import { NavLink } from '@/components/NavLink'
 import { MapPopover } from '@/components/ui/MapPopover'
-import logoLight from '@/assets/logo/logo-inline-light.png'
+import logoLight from '@/assets/logo/logo-inline-light.webp'
 
 export function Footer() {
   const { t } = useLanguage()

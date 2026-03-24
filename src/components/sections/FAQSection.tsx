@@ -9,7 +9,7 @@ import { Reveal } from '@/components/ui/Reveal'
 
 export function FAQSection() {
   const { t } = useLanguage()
-  const faqItems = [0, 1, 2, 3, 4].map((i) => ({
+  const faqItems = [0, 1, 2, 3, 4, 5].map((i) => ({
     question: t(`faq.items.${i}.question`),
     answer: t(`faq.items.${i}.answer`),
   }))
@@ -28,7 +28,9 @@ export function FAQSection() {
             <Reveal key={index} delay={160 + index * 80}>
               <AccordionItem value={`item-${index}`}>
                 <AccordionTrigger>{item.question}</AccordionTrigger>
-                <AccordionContent>{item.answer}</AccordionContent>
+                <AccordionContent>
+                  <span className="whitespace-pre-line">{item.answer}</span>
+                </AccordionContent>
               </AccordionItem>
             </Reveal>
           ))}

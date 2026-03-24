@@ -8,11 +8,14 @@ import { Reveal } from '@/components/ui/Reveal'
 import heroTaxi from '@/assets/img/hero-taxi.webp'
 import heroTaxi1 from '@/assets/img/hero-taxi-1.webp'
 import heroDelivery from '@/assets/img/hero-delivery.webp'
+import heroCompany from '@/assets/img/hero-company.webp'
+import corollaRight from '@/assets/img/corolla-right.webp'
 
 const SLIDES = [
   { src: heroTaxi, alt: 'Kierowca taxi' },
   { src: heroTaxi1, alt: 'Kierowca taxi' },
   { src: heroDelivery, alt: 'Kierowca dostawczy' },
+  { src: heroCompany, alt: 'Drago Partner biuro' },
 ]
 
 export function HeroSection() {
@@ -26,7 +29,7 @@ export function HeroSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Content column */}
-          <div className="flex flex-col justify-center pl-6 sm:pl-14 lg:pl-20 pr-4 sm:pr-12 lg:pr-8 pt-24 pb-16 lg:py-32">
+          <div className="flex flex-col justify-start lg:justify-center pl-6 sm:pl-14 lg:pl-20 pr-4 sm:pr-12 lg:pr-8 pt-36 sm:pt-40 lg:py-32 pb-0 lg:pb-32">
             <Reveal>
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-dark mb-6 border border-dark/20 px-3 py-1 self-start">
                 {t('hero.badge')}
@@ -60,6 +63,15 @@ export function HeroSection() {
                 </CTAButton>
               </Reveal> */}
             </div>
+
+            {/* Mobile/tablet car image — visible only below lg */}
+            <Reveal delay={400} className="lg:hidden mt-10 -mx-6 sm:-mx-14">
+              <img
+                src={corollaRight}
+                alt="Toyota Corolla Drago Partner"
+                className="w-full object-contain"
+              />
+            </Reveal>
           </div>
 
           {/* Carousel column */}

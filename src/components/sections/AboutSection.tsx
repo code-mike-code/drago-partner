@@ -7,7 +7,7 @@ import about2 from '@/assets/img/about-2.webp'
 import about3 from '@/assets/img/about-3.webp'
 import about4 from '@/assets/img/about-4.webp'
 import about5 from '@/assets/img/about-5.webp'
-import about6 from '@/assets/img/about-6.webp'
+// import about6 from '@/assets/img/about-6.webp'
 
 const ABOUT_SLIDES = [
   { src: about1, alt: 'Kierowca Drago Partner przy samochodzie' },
@@ -15,7 +15,7 @@ const ABOUT_SLIDES = [
   { src: about3, alt: 'Kierowca Uber w trakcie kursu' },
   { src: about4, alt: 'Kierowca Bolt odbiera pasażera' },
   { src: about5, alt: 'Nowoczesna flota pojazdów Drago Partner' },
-  { src: about6, alt: 'Kierowca podczas szkoleń Drago Partner' },
+  // { src: about6, alt: 'Kierowca podczas szkoleń Drago Partner' },
 ]
 
 export function AboutSection() {

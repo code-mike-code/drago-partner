@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 import { useLanguage } from '@/hooks/useLanguage'
-import logoDark from '@/assets/logo/logo-inline-dark.png'
+import logoDark from '@/assets/logo/logo-inline-dark.webp'
 
 export default function TermsOfService() {
   const { t } = useLanguage()

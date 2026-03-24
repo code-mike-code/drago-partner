@@ -39,6 +39,26 @@ export const sr = {
   services: {
     heading: 'Šta nudimo',
     subheading: 'Sveobuhvatna podrška u svakoj fazi',
+    offerHeading: 'Ponuda',
+    cards: {
+      taxi: {
+        title: 'Vozač Taksija',
+        description: 'Postani vozač Uber, Bolt ili FreeNow u Varšavi uz punu podršku Drago Partner. Pomažemo ti da dobiješ taxi licencu, pripremiš dokumenta i brzo počneš legalni rad. Stabilan prihod, fleksibilni raspored i provereni flotni partner od prvog dana.',
+        salaryLabel: 'Prosečna plata',
+        salaryValue: 'od 9 000 PLN',
+      },
+      courier: {
+        title: 'Kurir',
+        description: 'Radi kao kurir Uber Eats ili Bolt Food u Varšavi – fleksibilno radno vreme i atraktivna zarada. Drago Partner pruža punu podršku pri registraciji, obuci i svakodnevnom radu. Počni da zarađuješ kao kurir u Varšavi već danas.',
+        salaryLabel: 'Prosečna plata',
+        salaryValue: 'od 6 000 PLN',
+      },
+      rental: {
+        title: 'Iznajmljivanje automobila',
+        description: 'Iznajmljivanje automobila za vozače Uber, Bolt i FreeNow u Varšavi. Drago Partner nudi moderna vozila iz sopstvene flote – bez kupovine sopstvenog auta. Iznajmi vozilo i počni da radiš kao taksista ili kurir u Varšavi već sutra.',
+      },
+    },
+    disclaimer: 'Gore navedene informacije su informativnog karaktera i ne predstavljaju komercijalnu ponudu u smislu čl. 66 §1 Građanskog zakonika. Prikazani sadržaj je poziv na zaključenje ugovora u skladu sa čl. 71 GZ.',
     item1: {
       number: '01',
       title: 'Registracija i dokumenti',
@@ -78,24 +98,28 @@ export const sr = {
     heading: 'Česta pitanja',
     items: [
       {
-        question: 'Koji dokumenti su potrebni za registraciju?',
-        answer: 'Potrebni su: lična karta ili pasoš, vozačka dozvola kategorije B (min. 3 godine), uverenje o nekaznjavanju, lekarski i psihotehničarski pregledi.',
+        question: 'Koja dokumenta su potrebna za rad kao taxi vozač u Poljskoj?',
+        answer: '• Poljska vozačka dozvola.\n• Putničko vozilo sa ispisom licence koji ispunjava zahteve pojedinih platformi.\n• Kompletan set dokumenata: lična karta ili pasoš, poljska vozačka dozvola, lekarski i psihološki nalaz, uverenje o nekaznjavanju – poljsko i iz zemlje državljanstva (overeni prevod), ne starije od 30 dana.\n• Registracija naloga na platformama i prolaz verifikacije u kancelarijama pojedinih platformi.',
       },
       {
-        question: 'Koliko mogu da zaradim kao vozač?',
-        answer: 'Zarada zavisi od broja radnih sati i odabrane platforme. Aktivni vozači zarađuju prosečno od 5.000 do 9.000 PLN mesečno neto.',
+        question: 'Kako započeti saradnju?',
+        answer: '1. Popunite prijavni formular kako biste pokrenuli saradnju i stupili u kontakt sa nama.\n2. Zakažite sastanak radi dostavljanja dokumenata – originali i kopije.',
       },
       {
-        question: 'Da li mi je potreban sopstveni auto?',
-        answer: 'To nije obavezno. Pomažemo u pronalaženju opcija lizinga ili iznajmljivanja vozila pogodnog za prevoz.',
+        question: 'Zahtevi za vozilo?',
+        answer: 'Uber\n• Varšava: vozilo iz 2005. ili novije; ostali gradovi: 2004. ili novije.\n• Registrovano u Poljskoj.\n• Važeće osiguranje i tehnički pregled.\n• Pečat taxi tehničkog pregleda u saobraćajnoj dozvoli i važeći ispis taxi partner licence.\n• Obeležavanje vozila u skladu sa propisima grada.\n• 4–5 vrata, minimum 5 sedećih mesta.\n• Volan sa leve strane.\n\nBolt\n• Vozilo iz 2005. ili novije, registrovano u Poljskoj.\n• Pečat taxi tehničkog pregleda i važeći ispis taxi partner licence.\n• Obeležavanje vozila u skladu sa propisima grada.\n\nFreeNow\n• Vozilo iz 2007. ili novije, registrovano u Poljskoj.\n• Pečat taxi tehničkog pregleda i važeći ispis taxi partner licence.\n• Obeležavanje vozila u skladu sa propisima grada.\n• Važeće osiguranje i tehnički pregled.',
       },
       {
-        question: 'Koliko traje proces registracije?',
-        answer: 'Standardni proces registracije traje od 3 do 7 radnih dana, u zavisnosti od kompletnosti dokumentacije.',
+        question: 'Da li moram znati poljski jezik da bih počeo da radim?',
+        answer: 'Poljski jezik nije obavezan, ali preporučujemo poznavanje osnova za bolju komunikaciju sa putnicima.',
       },
       {
-        question: 'Da li nudite podršku na srpskom ili engleskom?',
-        answer: 'Da. Naš tim opslužuje vozače na poljskom, engleskom, ukrajinskom, srpskom i gruzijskom jeziku.',
+        question: 'Kako izgleda proces dobijanja ispisa licence i identifikatora?',
+        answer: '1. Kontaktirajte naš ured za korisničku podršku radi prikupljanja potrebnih dokumenata.\n2. Pomoći ćemo vam da prođete kroz ceo proces registracije kako biste što pre mogli da počnete sa radom.\n\nAko imate dodatnih pitanja, kontaktirajte naš ured za korisničku podršku – pomoći ćemo vam sa celim procesom.',
+      },
+      {
+        question: 'Da li mogu da radim istovremeno na više platformi?',
+        answer: 'Da, možete raditi na više platformi istovremeno, što će vam pomoći da povećate zaradu. Pripremićemo vas za rad sa svakom platformom.',
       },
     ],
   },
