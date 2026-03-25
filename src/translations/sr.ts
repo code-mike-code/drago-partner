@@ -30,7 +30,9 @@ export const sr = {
 
   about: {
     heading: 'Ko smo mi',
+    headingSecond: 'Naša flota',
     text: 'Drago Partner je agencija za regrutaciju specijalizovana za pronalaženje i podršku profesionalnih vozača. Pomažemo sa kompletnom registracijom, obukom i operativnom podrškom kako biste se mogli fokusirati na ono što je važno — vožnju.',
+    desc: 'Raspolažemo sopstvenim, velikim i modernim voznim parkom. Garantujemo potpunu pomoć u svakoj fazi — od registracije i obuke do svakodnevnih obračuna — kako biste se mogli fokusirati isključivo na ono što je važno: bezbednoj vožnji i zarađivanju.',
     stat1: { value: '500+', label: 'Aktivnih vozača' },
     stat2: { value: '3', label: 'Platforme: Uber, Bolt, FreeNow' },
     stat3: { value: '24/7', label: 'Operativna podrška' },

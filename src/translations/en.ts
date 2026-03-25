@@ -30,7 +30,9 @@ export const en = {
 
   about: {
     heading: 'Who we are',
+    headingSecond: 'Our Fleet',
     text: 'Drago Partner is a recruitment agency specialising in sourcing and supporting professional drivers. We assist with full registration, training, and ongoing operational support so you can focus on what matters — driving.',
+    desc: 'We operate our own large and modern vehicle fleet. We provide comprehensive assistance at every stage — from registration and training to daily settlements — so you can focus solely on what matters: safe driving and earning.',
     stat1: { value: '500+', label: 'Active drivers' },
     stat2: { value: '3', label: 'Platforms: Uber, Bolt, FreeNow' },
     stat3: { value: '24/7', label: 'Operational support' },
