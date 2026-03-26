@@ -1,218 +1,196 @@
-# Drago Partner - Platform Rekrutacyjna dla Kierowców
+# Drago Partner — Driver Recruitment Platform
 
-Nowoczesna, responsywna aplikacja webowa dla agencji rekrutacyjnej Drago Partner. Zbudowana w React, TypeScript i Tailwind CSS.
+A modern, responsive web application for Drago Partner — a fleet partner for professional drivers working with Uber, Bolt, and FreeNow in Warsaw, Poland.
 
-## 🚛 O Projekcie
+![Drago Partner Preview](docs/preview.png)
 
-Drago Partner to profesjonalna platforma dedykowana rekrutacji kierowców zawodowych na przewozy osób wykorzystując platformy takie jak: Uber, Bolt i FreeNow, oferująca:
-- **Formularz Zgłoszeniowy** – integracja z Google Forms, pierwszy krok do rejestracji kandydata
-- **Rezerwacja Wizyty** – system umawiania spotkań przez Google Calendar z dedykowanymi slotami czasowymi
-- **Portal Kierowcy** – strefa dla zalogowanych kierowców *(konfiguracja – implementacja w przyszłości)*
-- **Wsparcie Wielojęzyczne** – obsługa 5 języków: Polski, Angielski, Ukraiński, Serbski, Gruziński,
+---
 
-## 🛠️ Tech Stack
+## About
 
-- **Frontend Framework**: React 18 z TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn-ui (Radix UI + Tailwind)
-- **Routing**: React Router v6
-- **Form Management**: React Hook Form + Zod validation
-- **Icons**: Lucide React
-- **Internationalization**: Custom i18n hooks (`useLanguage`)
-- **State Management**: TanStack React Query
-- **Calendar Integration**: Google Calendar API
-- **Form Integration**: Google Forms embed / redirect
+Drago Partner connects professional drivers and couriers with leading ride-hailing and food delivery platforms. The site serves as a lead-generation and recruitment landing page, offering:
 
-## 📦 Struktura Projektu
+- **Recruitment form** — integrated with Google Forms; the entry point for all candidates
+- **Office appointment booking** — via an internal CRM system, available after submitting the form
+- **Multilingual support** — 5 languages: Polish, English, Ukrainian, Serbian, Georgian
+- **Cookie consent** — GDPR-compliant banner with Google Analytics opt-in
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | React 18 + TypeScript |
+| Build | Vite + SWC |
+| Styling | Tailwind CSS (custom theme, zero border-radius) |
+| Routing | React Router v6 |
+| i18n | Custom context-based (`useLanguage` hook) |
+| Icons | Lucide React |
+| SEO | react-helmet-async |
+| Accordion | @radix-ui/react-accordion |
+
+> No component library. All UI is built with plain HTML + Tailwind CSS.
+
+---
+
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── layout/          # Header, Footer
-│   ├── sections/        # Sekcje strony (Hero, O nas, Oferta, itp.)
-│   ├── modals/          # Modal potwierdzenia rezerwacji
-│   └── ui/              # Reużywalne komponenty shadcn-ui
+│   ├── layout/           # Header, Footer
+│   ├── sections/         # HeroSection, AboutSection, ServicesSection,
+│   │                     # FAQSection, ContactSection, ContactFormSection
+│   ├── ui/               # button.tsx, accordion.tsx, MapPopover.tsx
+│   ├── LanguageSwitcher.tsx
+│   └── NavLink.tsx
 ├── pages/
-│   ├── Home.tsx         # Strona główna
-│   └── DriverPortal.tsx # Portal kierowcy (placeholder)
+│   ├── Index.tsx          # Landing page
+│   ├── PrivacyPolicy.tsx
+│   ├── TermsOfService.tsx
+│   └── NotFound.tsx
 ├── hooks/
-│   ├── useLanguage.ts   # Hook do obsługi i18n
-│   └── useBooking.ts    # Logika rezerwacji wizyty
-├── lib/                 # Funkcje pomocnicze
-├── i18n/
-│   ├── pl.ts            # Tłumaczenia PL
-│   ├── en.ts            # Tłumaczenia EN
-│   ├── uk.ts            # Tłumaczenia UK
-│   └── sr.ts            # Tłumaczenia SR
-│   └── gr.ts            # Tłumaczenia GR
-├── App.tsx
-└── main.tsx
+│   └── useLanguage.tsx    # i18n hook + LanguageProvider
+├── translations/
+│   ├── pl.ts              # Polish
+│   ├── en.ts              # English
+│   ├── ua.ts              # Ukrainian
+│   ├── sr.ts              # Serbian
+│   └── gr.ts              # Georgian
+├── lib/
+│   └── utils.ts           # cn() utility (clsx + tailwind-merge)
+└── assets/
 ```
 
-## 🚀 Pierwsze Kroki
+---
 
-### Wymagania
-- Node.js (v16 lub wyżej)
-- npm lub yarn
+## Getting Started
 
-### Instalacja
+### Requirements
 
-1. Sklonuj repozytorium:
+- Node.js v18+
+- npm
+
+### Installation
+
 ```bash
 git clone <repository-url>
-cd drago-partner
-```
-
-2. Zainstaluj zależności:
-```bash
+cd drago-partner-v0.2
 npm install
 ```
 
-3. Uruchom serwer deweloperski:
-```bash
-npm run dev
-```
-
-Aplikacja będzie dostępna pod adresem `http://localhost:8080`
-
-## 📝 Dostępne Skrypty
+### Development
 
 ```bash
-npm run dev        # Serwer deweloperski z auto-przeładowaniem
-npm run build      # Build produkcyjny
-npm run build:dev  # Build deweloperski
-npm run preview    # Podgląd builda produkcyjnego lokalnie
-npm run lint       # Uruchomienie ESLint
+npm run dev        # Dev server at http://localhost:8080
+npm run build      # Production build → dist/
+npm run build:dev  # Dev build with source maps
+npm run preview    # Preview production build locally
+npm run lint       # ESLint
 ```
 
-## 🌐 Internacjonalizacja (i18n)
+---
 
-Projekt obsługuje 4 języki z własnym systemem i18n opartym na hooku `useLanguage`.
+## Environment Variables
 
-| Język      | Kod | Status        |
-|------------|-----|---------------|
-| Polski     | pl  | ✅ Aktywny    |
-| Angielski  | en  | ✅ Aktywny    |
-| Ukraiński  | uk  | ✅ Aktywny    |
-| Gruziński  | ge  | ✅ Aktywny    |
-| Serbski    | sr  | ✅ Aktywny    |
+Create a `.env` file in the project root:
 
-Przełącznik języków dostępny w komponencie `LanguageSwitcher` w nagłówku.
-
-## 📋 Funkcjonalności – Szczegóły
-
-### 1. Formularz Zgłoszeniowy (Google Forms)
-- Osadzony formularz Google Forms lub przekierowanie do formularza
-- Kandydat wypełnia formularz jako **pierwszy i obowiązkowy krok**
-- Brak wcześniejszego wypełnienia formularza blokuje możliwość rezerwacji wizyty
-
-### 2. Rezerwacja Wizyty (Google Calendar)
-- Użytkownik może zarezerwować wizytę **wyłącznie po wypełnieniu formularza zgłoszeniowego**
-- Przed otwarciem kalendarza wyświetlany jest **modal z ostrzeżeniem**:
-
-  > _„Zarezerwuj wizytę tylko jeśli wypełniłeś/aś formularz zgłoszeniowy i posiadasz komplet dokumentów. W przypadku braku dokumentów skontaktuj się telefonicznie z biurem obsługi."_
-
-- Kalendarz zawiera predefiniowane sloty czasowe ustawione przez administratora w Google Calendar
-- Użytkownik wybiera dostępny termin i potwierdza rezerwację
-
-### 3. Portal Kierowcy *(Konfiguracja – przyszła implementacja)*
-- Strefa zalogowanych kierowców
-- Aktualnie: strona placeholder / szkielet nawigacji
-- Planowane funkcje: podgląd statusu aplikacji, dokumenty, harmonogram
-
-## 🔧 Konfiguracja Integracji
-
-### Google Forms
-Ustaw URL formularza w pliku konfiguracyjnym lub zmiennej środowiskowej:
 ```env
 VITE_GOOGLE_FORMS_URL=https://docs.google.com/forms/d/YOUR_FORM_ID/viewform
-```
-
-### Google Calendar
-Ustaw ID kalendarza i klucz API:
-```env
 VITE_GOOGLE_CALENDAR_ID=your_calendar_id@group.calendar.google.com
 VITE_GOOGLE_API_KEY=your_google_api_key
 ```
 
-## 📱 Responsywność
-
-Aplikacja w pełni responsywna z breakpointami:
-- Mobile: < 640px
-- Tablet: 640px – 1024px
-- Desktop: > 1024px
-
-## 🔧 Pliki Konfiguracyjne
-
-- `vite.config.ts` – konfiguracja Vite
-- `tailwind.config.ts` – kustomizacja Tailwind CSS
-- `tsconfig.json` – konfiguracja TypeScript
-- `eslint.config.js` – reguły ESLint
-- `components.json` – rejestr komponentów shadcn-ui
-- `.env` – zmienne środowiskowe (Google API keys)
-
-## 📦 Kluczowe Zależności
-
-- **shadcn-ui** – biblioteka komponentów z Radix UI
-- **Tailwind CSS** – utility-first CSS framework
-- **React Router** – routing po stronie klienta
-- **React Hook Form** – obsługa formularzy
-- **Zod** – walidacja schematów runtime
-- **TanStack Query** – zarządzanie stanem asynchronicznym
-- **Sonner** – powiadomienia toast
-- **Lucide React** – biblioteka ikon
-
-## 🚀 Deployment
-
-### 1. Build i weryfikacja
-```bash
-npm run build
-npm run preview
-```
-
-### 2. Output
-Wyniki builda znajdują się w katalogu `dist/`.
-
-### 3. Konfiguracja SPA Routing
-- **Vercel**: obsługiwane automatycznie
-- **Netlify**: utwórz plik `public/_redirects`:
-  ```
-  /*  /index.html  200
-  ```
-- **GitHub Pages**: wymaga `HashRouter` lub custom `404.html`
-
-## 👨‍💻 Rozwój Projektu
-
-### Jakość Kodu
-- ESLint do lintowania
-- TypeScript dla bezpieczeństwa typów
-- Tailwind CSS dla spójnego stylowania
-
-### Dobre Praktyki
-- Kompozycja komponentów zamiast dziedziczenia
-- Custom hooks do reużywania logiki
-- Semantyczny HTML
-- Dostępność (accessibility)
-- Optymalizacja wydajności z code splitting
-
-## 🤝 Współpraca
-
-Przy wnoszeniu zmian do projektu:
-1. Utwórz branch funkcjonalności (`feature/nazwa`)
-2. Wprowadź zmiany
-3. Przetestuj dokładnie
-4. Wyślij Pull Request
-
-## 📄 Licencja
-
-Projekt jest własnością prywatną i poufny.
-
-## 📞 Wsparcie
-
-W przypadku pytań lub problemów skontaktuj się z zespołem deweloperskim.
+> Variables are embedded at build time by Vite — they do not need to be set on the server.
 
 ---
 
-**Wersja**: 0.1.0  
-**Ostatnia aktualizacja**: Marzec 2026
+## Internationalisation
+
+Custom i18n system using React Context. Language is stored in `localStorage` and defaults to the browser locale.
+
+```tsx
+const { t, language, setLanguage } = useLanguage()
+<h1>{t('hero.title')}</h1>
+```
+
+Translation files live in `src/translations/`. When adding new copy, add the key to **all 5 files**.
+
+| Language | Code | File |
+|---|---|---|
+| Polish | pl | `pl.ts` |
+| English | en | `en.ts` |
+| Ukrainian | ua | `ua.ts` |
+| Serbian | sr | `sr.ts` |
+| Georgian | gr | `gr.ts` |
+
+---
+
+## Design System
+
+| Token | Value |
+|---|---|
+| Primary accent | Illuminating Yellow `#f5df4d` |
+| Neutral | Ultimate Grey `#939597` |
+| Background | Ghost White `#F8F8FF` / White |
+| Font | Inter |
+| Border radius | **None** — `rounded-*` classes are never used |
+| Button min-height | 44px (accessibility) |
+| Section spacing | `py-24 md:py-32 lg:py-40` |
+
+---
+
+## Deployment
+
+### Build
+
+```bash
+npm run build
+```
+
+Output goes to `dist/`. The folder must include a `.htaccess` file for SPA routing (Apache / Plesk):
+
+```apache
+Options -MultiViews
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
+
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+```
+
+### Hosting — idHosting (Plesk)
+
+1. Upload contents of `dist/` (including `.htaccess`) to `httpdocs/`
+2. Enable SSL via Plesk → Domains → SSL/TLS Certificates → Let's Encrypt
+
+---
+
+## Pages
+
+| Route | Component | Description |
+|---|---|---|
+| `/` | `Index.tsx` | Main landing page |
+| `/privacy-policy` | `PrivacyPolicy.tsx` | GDPR privacy & cookie policy |
+| `/terms-of-service` | `TermsOfService.tsx` | Terms of service |
+| `*` | `NotFound.tsx` | 404 fallback |
+
+---
+
+## Legal
+
+**Operator:** GB+ Spółka z ograniczoną odpowiedzialnością
+**NIP:** 5242881811
+**Address:** ul. Książkowa 9F/405, 03-134 Warszawa, Poland
+**Contact:** biuro@dragopartner.pl · +48 530 181 372
+
+---
+
+**Version:** 0.2.0
+**Last updated:** March 2026
+**License:** Private — all rights reserved.
