@@ -10,10 +10,10 @@ A modern, responsive web application for Drago Partner — a fleet partner for p
 
 Drago Partner connects professional drivers and couriers with leading ride-hailing and food delivery platforms. The site serves as a lead-generation and recruitment landing page, offering:
 
-- **Recruitment form** — integrated with Google Forms; the entry point for all candidates
-- **Office appointment booking** — via an internal CRM system, available after submitting the form
-- **Multilingual support** — 5 languages: Polish, English, Ukrainian, Serbian, Georgian
-- **Cookie consent** — GDPR-compliant banner with Google Analytics opt-in
+- **Recruitment form** - integrated with Google Forms; the entry point for all candidates
+- **Office appointment booking** - via an internal CRM system, available after submitting the form
+- **Multilingual support** - 5 languages: Polish, English, Ukrainian, Serbian, Georgian
+- **Cookie consent** - GDPR-compliant banner with Google Analytics opt-in
 
 ---
 
@@ -102,7 +102,7 @@ VITE_GOOGLE_CALENDAR_ID=your_calendar_id@group.calendar.google.com
 VITE_GOOGLE_API_KEY=your_google_api_key
 ```
 
-> Variables are embedded at build time by Vite — they do not need to be set on the server.
+> Variables are embedded at build time by Vite - they do not need to be set on the server.
 
 ---
 
@@ -193,4 +193,4 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 **Version:** 0.2.0
 **Last updated:** March 2026
-**License:** Private — all rights reserved.
+**License:** Private - all rights reserved.
