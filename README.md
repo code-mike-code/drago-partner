@@ -1,6 +1,6 @@
 # Drago Partner - Driver Recruitment Platform
 
-A modern, responsive web application for Drago Partner — a fleet partner for professional drivers working with Uber, Bolt, and FreeNow in Warsaw, Poland.
+A modern, responsive web application for Drago Partner - a fleet partner for professional drivers working with Uber, Bolt, and FreeNow in Warsaw, Poland.
 
 ![Drago Partner Preview](docs/preview.png)
 
