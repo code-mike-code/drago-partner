@@ -18,7 +18,7 @@ export default function Index() {
   return (
     <>
       <Helmet>
-        <title>Drago Partner – {t('footer.tagline')}</title>
+        <title>{t('meta.title')}</title>
         <meta name="description" content={t('meta.description')} />
         <meta name="keywords" content={t('meta.keywords')} />
         <link rel="canonical" href="https://dragopartner.pl/" />
@@ -26,7 +26,7 @@ export default function Index() {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://dragopartner.pl/" />
-        <meta property="og:title" content={`Drago Partner – ${t('footer.tagline')}`} />
+        <meta property="og:title" content={t('meta.title')} />
         <meta property="og:description" content={t('meta.description')} />
         <meta property="og:image" content="https://dragopartner.pl/og-image.jpg" />
         <meta property="og:locale" content="pl_PL" />
@@ -34,17 +34,25 @@ export default function Index() {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={`Drago Partner – ${t('footer.tagline')}`} />
+        <meta name="twitter:title" content={t('meta.title')} />
         <meta name="twitter:description" content={t('meta.description')} />
         <meta name="twitter:image" content="https://dragopartner.pl/og-image.jpg" />
 
-        {/* JSON-LD: LocalBusiness */}
+        {/* JSON-LD: EmploymentAgency + LocalBusiness */}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": ["EmploymentAgency", "LocalBusiness"],
+          "@id": "https://dragopartner.pl/#organization",
           "name": "Drago Partner",
-          "description": "Partner flotowy Uber, Bolt i FreeNow w Warszawie. Wynajem aut, licencje taxi, szkolenia i wsparcie kierowców.",
+          "description": "Drago Partner to sprawdzony partner flotowy z niemal 10-letnim doświadczeniem. Rekrutujemy i wspieramy kierowców taxi oraz kurierów współpracujących z Uber, Bolt, FreeNow, Uber Eats i Bolt Food w Warszawie.",
           "url": "https://dragopartner.pl",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dragopartner.pl/logo.webp",
+            "width": 300,
+            "height": 80
+          },
+          "image": "https://dragopartner.pl/og-image.jpg",
           "telephone": "+48530181372",
           "email": "biuro@dragopartner.pl",
           "address": {
@@ -52,6 +60,7 @@ export default function Index() {
             "streetAddress": "Modlińska 310/312 lok. 2",
             "addressLocality": "Warszawa",
             "postalCode": "03-152",
+            "addressRegion": "Mazowieckie",
             "addressCountry": "PL"
           },
           "geo": {
@@ -59,62 +68,120 @@ export default function Index() {
             "latitude": 52.3102,
             "longitude": 20.9947
           },
+          "areaServed": [
+            { "@type": "State", "name": "Mazowieckie" },
+            { "@type": "Country", "name": "Polska" }
+          ],
           "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "opens": "10:00",
             "closes": "18:00"
           },
-          "image": "https://dragopartner.pl/og-image.jpg",
           "sameAs": [
             "https://www.instagram.com/dragopartnertaxi",
             "https://www.facebook.com/share/1CYoKHcnMd/"
           ]
         })}</script>
 
-        {/* JSON-LD: FAQPage — Google może wyświetlić FAQ bezpośrednio w wynikach */}
+        {/* JSON-LD: OfferCatalog */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "serviceType": "Rekrutacja i wsparcie kierowców taxi i kurierów",
+          "provider": {
+            "@type": "Organization",
+            "name": "Drago Partner",
+            "@id": "https://dragopartner.pl/#organization"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Oferta Drago Partner",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Kierowca Taxi",
+                "description": "Zostań kierowcą Uber, Bolt lub FreeNow w Warszawie z pełnym wsparciem Drago Partner. Pomożemy Ci uzyskać licencję taxi, skompletować dokumenty i szybko rozpocząć legalną pracę."
+              },
+              {
+                "@type": "Offer",
+                "name": "Kurier",
+                "description": "Pracuj jako kurier Uber Eats lub Bolt Food w Warszawie – elastyczny grafik i atrakcyjne wynagrodzenie z pełnym wsparciem Drago Partner."
+              },
+              {
+                "@type": "Offer",
+                "name": "Wynajem samochodów",
+                "description": "Wynajem samochodów dla kierowców Uber, Bolt i FreeNow w Warszawie z własnej, nowoczesnej floty Drago Partner."
+              }
+            ]
+          }
+        })}</script>
+
+        {/* JSON-LD: BreadcrumbList */}
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Strona główna",
+              "item": "https://dragopartner.pl/"
+            }
+          ]
+        })}</script>
+
+        {/* JSON-LD: FAQPage — pytania zsynchronizowane z FAQ widocznym na stronie */}
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "FAQPage",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Jakie dokumenty są potrzebne do rejestracji?",
+              "name": "Jakich dokumentów potrzebuję, aby pracować jako kierowca taxi w Polsce?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Do rejestracji potrzebujesz: dowód osobisty lub paszport, prawo jazdy kategorii B (min. 3 lata), zaświadczenie o niekaralności, badania lekarskie i psychotechniczne."
+                "text": "Polskie prawo jazdy. Samochód osobowy z wypisem z licencji spełniającym wymagania poszczególnych platform. Komplet dokumentów: dowód osobisty lub paszport, polskie prawo jazdy, orzeczenie lekarskie i psychologiczne, zaświadczenie o niekaralności – polskie oraz kraju obywatelstwa (tłumaczenie przysięgłe), nie starsze niż 30 dni. Rejestracja konta na platformach i przejście weryfikacji w biurach poszczególnych platform."
               }
             },
             {
               "@type": "Question",
-              "name": "Ile mogę zarobić jako kierowca?",
+              "name": "Jak rozpocząć współpracę?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Zarobki zależą od liczby przepracowanych godzin i wybranej platformy. Aktywni kierowcy zarabiają średnio od 5 000 do 9 000 zł miesięcznie netto."
+                "text": "1. Wypełnij formularz zgłoszeniowy, aby rozpocząć współpracę i nawiązać z nami kontakt. 2. Umów się na spotkanie w celu dostarczenia dokumentów – oryginały oraz kopie."
               }
             },
             {
               "@type": "Question",
-              "name": "Czy muszę mieć własny samochód?",
+              "name": "Wymagania dotyczące pojazdu?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nie jest to wymagane. Pomagamy w znalezieniu opcji leasingu lub wynajmu pojazdu odpowiedniego do przewozów."
+                "text": "Uber: samochód z 2005 roku lub nowszy, zarejestrowany w Polsce, ważne ubezpieczenie i przegląd techniczny, pieczątka z przeglądu taxi, 4–5 drzwi, minimum 5 miejsc. Bolt: samochód z 2005 roku lub nowszy, zarejestrowany w Polsce, pieczątka z przeglądu taxi. FreeNow: samochód z 2007 roku lub nowszy, zarejestrowany w Polsce, pieczątka z przeglądu taxi."
               }
             },
             {
               "@type": "Question",
-              "name": "Jak długo trwa proces rejestracji?",
+              "name": "Czy muszę znać język polski, aby rozpocząć pracę?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Standardowy proces rejestracji trwa od 3 do 7 dni roboczych, w zależności od kompletności dokumentacji."
+                "text": "Język polski nie jest obowiązkowy, ale zalecamy znać podstawy języka dla lepszej komunikacji z klientami."
               }
             },
             {
               "@type": "Question",
-              "name": "Czy oferujecie wsparcie w języku ukraińskim lub angielskim?",
+              "name": "Jak wygląda proces uzyskania wypisu z licencji i identyfikatora?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Tak. Nasz zespół obsługuje kierowców w języku polskim, angielskim, ukraińskim, serbskim i gruzińskim."
+                "text": "Skontaktuj się z naszym biurem obsługi w celu skompletowania niezbędnych dokumentów. Pomożemy Ci przejść przez cały proces rejestracji, abyś mógł rozpocząć pracę jak najszybciej."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy mogę pracować jednocześnie na kilku platformach?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, możesz pracować na wielu platformach jednocześnie, co pozwoli Ci zwiększyć zarobki. Przygotujemy Cię do pracy z każdą platformą."
               }
             }
           ]

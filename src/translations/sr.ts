@@ -16,7 +16,8 @@ export const sr = {
 
   // SEO Meta
   meta: {
-    description: 'Drago Partner – flotni partner Uber, Bolt i FreeNow u Varšavi. Nudimo iznajmljivanje automobila, pomoć u dobijanju taxi licence, obuke i punu podršku za vozače i kurire.',
+    title: 'Drago Partner – Uber, Bolt, FreeNow | Vozači Varšava',
+    description: 'Drago Partner – flotni partner Uber, Bolt i FreeNow u Varšavi. Iznajmljivanje automobila, taxi licenca, obuke i podrška za vozače i kurire.',
     keywords: 'такси Варшава, партнер Убер Варшава, партнер Болт Варшава, FreeNow Варшава, посао возача Варшава, изнајмљивање аута Убер, лиценца такси Варшава, документи за возача Варшава, Uber Eats Варшава, посао за Србе Варшава',
   },
 

@@ -52,6 +52,8 @@ export function ImageCarousel({
             src={slide.src}
             alt={slide.alt}
             loading={eagerFirst && i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={eagerFirst && i === 0 ? 'high' : 'auto'}
+            decoding={eagerFirst && i === 0 ? 'sync' : 'async'}
             className={cn(
               'w-full h-full',
               i === current ? 'animate-carousel-enter' : '',

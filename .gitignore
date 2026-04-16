@@ -19,7 +19,6 @@ dist-ssr/
 # claude code
 .claude/
 CLAUDE.md
-frontend-design.md
 
 # Local env files
 .env

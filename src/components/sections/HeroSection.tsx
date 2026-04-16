@@ -69,6 +69,8 @@ export function HeroSection() {
               <img
                 src={corollaRight}
                 alt="Toyota Corolla Drago Partner"
+                loading="lazy"
+                decoding="async"
                 className="w-full object-contain"
               />
             </Reveal>
