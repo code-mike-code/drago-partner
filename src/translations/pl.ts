@@ -195,5 +195,9 @@ export const pl = {
       terms: 'Regulamin',
     },
     copyright: '© {year} Drago Partner. Wszelkie prawa zastrzeżone.',
+    partner: {
+      heading: 'Partner',
+      description: 'Poland Radar — wiadomości i poradniki dla obcokrajowców w Polsce, po angielsku i nie tylko. Lokalne newsy oraz praktyczne info o karcie pobytu, zdrowiu, podatkach, pracy i życiu codziennym.',
+    },
   },
 }

@@ -52,7 +52,7 @@ export function ImageCarousel({
             src={slide.src}
             alt={slide.alt}
             loading={eagerFirst && i === 0 ? 'eager' : 'lazy'}
-            fetchPriority={eagerFirst && i === 0 ? 'high' : 'auto'}
+            {...{ fetchpriority: eagerFirst && i === 0 ? 'high' : 'auto' } as Record<string, string>}
             decoding={eagerFirst && i === 0 ? 'sync' : 'async'}
             className={cn(
               'w-full h-full',

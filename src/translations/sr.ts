@@ -187,5 +187,9 @@ export const sr = {
       terms: 'Uslovi korišćenja',
     },
     copyright: '© {year} Drago Partner. Sva prava zadržana.',
+    partner: {
+      heading: 'Partner',
+      description: 'Poland Radar — vesti i vodiči za strance u Poljskoj, dostupni na engleskom i više jezika. Lokalne vesti i praktične informacije o boravišnoj dozvoli, zdravlju, porezima, radu i svakodnevnom životu.',
+    },
   },
 }

@@ -187,5 +187,9 @@ export const en = {
       terms: 'Terms of Service',
     },
     copyright: '© {year} Drago Partner. All rights reserved.',
+    partner: {
+      heading: 'Partner',
+      description: 'Poland Radar — news and guides for expats in Poland, available in English and more. Local updates plus practical info on residency permits, healthcare, taxes, work, and daily life.',
+    },
   },
 }

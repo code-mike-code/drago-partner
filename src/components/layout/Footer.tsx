@@ -5,6 +5,7 @@ import { useLanguage } from '@/hooks/useLanguage'
 import { NavLink } from '@/components/NavLink'
 import { MapPopover } from '@/components/ui/MapPopover'
 import logoLight from '@/assets/logo/logo-inline-light.webp'
+import polandRadarLogo from '@/assets/brand-logo/poland-radar-partner-logo.png'
 
 export function Footer() {
   const { t } = useLanguage()
@@ -134,8 +135,30 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Partner */}
+          <div className="border-t border-white/10 mt-12 pt-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-grey-mid mb-5">
+              {t('footer.partner.heading')}
+            </p>
+            <a
+              href="https://polandradar.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col sm:flex-row items-start gap-4 w-fit"
+            >
+              <img
+                src={polandRadarLogo}
+                alt="Poland Radar"
+                className="h-10 w-auto object-contain shrink-0 opacity-80 group-hover:opacity-100 transition-opacity duration-200"
+              />
+              <p className="text-sm text-grey-mid group-hover:text-white transition-colors duration-200 leading-relaxed max-w-xl">
+                {t('footer.partner.description')}
+              </p>
+            </a>
+          </div>
+
           {/* Bottom bar */}
-          <div className="border-t border-white/10 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-mid">
+          <div className="border-t border-white/10 mt-10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-grey-mid">
             <p>{t('footer.copyright').replace('{year}', String(year))}</p>
             <div className="flex gap-6">
               <Link

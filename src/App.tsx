@@ -9,7 +9,7 @@ import { CookieConsent } from '@/components/ui/CookieConsent'
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
