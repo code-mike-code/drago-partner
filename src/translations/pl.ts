@@ -29,6 +29,7 @@ export const pl = {
     subtitle: 'Dołącz do Drago Partner i prowadź przewozy przez Uber, Bolt i FreeNow z pełnym wsparciem naszego zespołu.',
     ctaPrimary: 'Wypełnij formularz',
     ctaSecondary: 'Zarezerwuj wizytę',
+    ctaPortal: 'Portal Kierowcy',
   },
 
   // About Section
@@ -182,6 +183,23 @@ export const pl = {
     learnMore: 'Dowiedz się więcej w polityce prywatności →',
     accept: 'Akceptuję',
     reject: 'Odrzuć',
+  },
+
+  // Download Section
+  download: {
+    badge: 'Aplikacja Drago Fleet',
+    heading: 'Wszystko w jednym miejscu',
+    subheading: 'Aplikacja dla kierowców z dostępem do Portalu Kierowcy – kontroluj zarobki, auto i kontakt z nami bez wychodzenia z telefonu.',
+    f1: { title: 'Zarobki ze wszystkich platform', text: 'Uber, Bolt, FreeNow i inne – cała historia i bieżące rozliczenia w jednym widoku.' },
+    f2: { title: 'Twoje samochody', text: 'Dane pojazdów, dokumenty i terminy zawsze pod ręką.' },
+    f3: { title: 'Szybki kontakt', text: 'Bezpośredni kontakt z opiekunem i biurem Drago Partner.' },
+    f4: { title: 'Promocje i bonusy', text: 'Aktualne promocje i oferty dla kierowców Drago Partner.' },
+    getIt: 'Pobierz aplikację',
+    appStore: 'Pobierz z',
+    appStoreName: 'App Store',
+    googlePlay: 'Pobierz z',
+    googlePlayName: 'Google Play',
+    portalNote: 'Wolisz przeglądarkę? Zaloguj się do portalu online.',
   },
 
   // Footer

@@ -3,6 +3,7 @@ import './CTAButton.css'
 
 interface CTAButtonProps {
   href?: string
+  external?: boolean
   onClick?: React.MouseEventHandler
   type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
@@ -14,6 +15,7 @@ interface CTAButtonProps {
 
 export function CTAButton({
   href,
+  external,
   onClick,
   type = 'button',
   disabled,
@@ -26,7 +28,12 @@ export function CTAButton({
 
   if (href) {
     return (
-      <a href={href} onClick={onClick} className={classes}>
+      <a
+        href={href}
+        onClick={onClick}
+        className={classes}
+        {...(external && { target: '_blank', rel: 'noopener noreferrer' })}
+      >
         {children}
       </a>
     )

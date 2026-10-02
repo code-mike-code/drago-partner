@@ -27,6 +27,7 @@ export const en = {
     subtitle: 'Join Drago Partner and drive with Uber, Bolt and FreeNow with full support from our team.',
     ctaPrimary: 'Fill out the form',
     ctaSecondary: 'Book an appointment',
+    ctaPortal: 'Driver Portal',
   },
 
   about: {
@@ -175,6 +176,23 @@ export const en = {
     learnMore: 'Learn more in our privacy policy →',
     accept: 'Accept',
     reject: 'Reject',
+  },
+
+  // Download Section
+  download: {
+    badge: 'Drago Fleet app',
+    heading: 'Everything in one place',
+    subheading: 'Driver app with access to the Driver Portal – track your earnings, cars and contact us right from your phone.',
+    f1: { title: 'Earnings from all platforms', text: 'Uber, Bolt, FreeNow and more – full history and current settlements in one view.' },
+    f2: { title: 'Your cars', text: 'Vehicle details, documents and deadlines always at hand.' },
+    f3: { title: 'Fast contact', text: 'Direct line to your manager and the Drago Partner office.' },
+    f4: { title: 'Promotions and bonuses', text: 'Current promotions and offers for Drago Partner drivers.' },
+    getIt: 'Get the app',
+    appStore: 'Download on the',
+    appStoreName: 'App Store',
+    googlePlay: 'Get it on',
+    googlePlayName: 'Google Play',
+    portalNote: 'Prefer a browser? Log in to the online portal.',
   },
 
   footer: {

@@ -27,6 +27,7 @@ export const sr = {
     subtitle: 'Pridružite se Drago Partner-u i vozite kroz Uber, Bolt i FreeNow uz punu podršku našeg tima.',
     ctaPrimary: 'Popuni formular',
     ctaSecondary: 'Zakaži posetu',
+    ctaPortal: 'Portal za vozače',
   },
 
   about: {
@@ -175,6 +176,23 @@ export const sr = {
     learnMore: 'Saznajte više u politici privatnosti →',
     accept: 'Prihvati',
     reject: 'Odbij',
+  },
+
+  // Download Section
+  download: {
+    badge: 'Aplikacija Drago Fleet',
+    heading: 'Sve na jednom mestu',
+    subheading: 'Aplikacija za vozače sa pristupom Portalu za vozače – pratite zaradu, automobile i kontakt sa nama direktno sa telefona.',
+    f1: { title: 'Zarada sa svih platformi', text: 'Uber, Bolt, FreeNow i druge – cela istorija i tekući obračuni u jednom prikazu.' },
+    f2: { title: 'Vaši automobili', text: 'Podaci o vozilima, dokumenta i rokovi uvek pri ruci.' },
+    f3: { title: 'Brz kontakt', text: 'Direktan kontakt sa menadžerom i kancelarijom Drago Partner.' },
+    f4: { title: 'Promocije i bonusi', text: 'Aktuelne promocije i ponude za vozače Drago Partner.' },
+    getIt: 'Preuzmite aplikaciju',
+    appStore: 'Preuzmite sa',
+    appStoreName: 'App Store',
+    googlePlay: 'Preuzmite sa',
+    googlePlayName: 'Google Play',
+    portalNote: 'Više volite pregledač? Prijavite se na onlajn portal.',
   },
 
   footer: {

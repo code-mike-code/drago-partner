@@ -11,6 +11,8 @@ import heroDelivery from '@/assets/img/hero-delivery.webp'
 import heroCompany from '@/assets/img/hero-company.webp'
 import corollaRight from '@/assets/img/corolla-right.webp'
 
+const PORTAL_URL = 'https://portal.dragopartner.pl/login'
+
 const SLIDES = [
   { src: heroTaxi, alt: 'Kierowca taxi' },
   { src: heroTaxi1, alt: 'Kierowca taxi' },
@@ -48,6 +50,12 @@ export function HeroSection() {
               <Reveal delay={300}>
                 <CTAButton href="#contact-form" variant="yellow">
                   {t('hero.ctaPrimary')}
+                </CTAButton>
+              </Reveal>
+
+              <Reveal delay={360}>
+                <CTAButton href={PORTAL_URL} external variant="dark">
+                  {t('hero.ctaPortal')}
                 </CTAButton>
               </Reveal>
 

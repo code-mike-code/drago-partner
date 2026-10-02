@@ -10,6 +10,7 @@ import { ServicesSection } from '@/components/sections/ServicesSection'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { FinalCTA } from '@/components/sections/FinalCTA'
+import { DownloadSection } from '@/components/sections/DownloadSection'
 import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget'
 
 export default function Index() {
@@ -198,6 +199,7 @@ export default function Index() {
         <FAQSection />
         <ContactSection />
         <FinalCTA />
+        <DownloadSection />
       </main>
       <Footer />
       <WhatsAppWidget />
