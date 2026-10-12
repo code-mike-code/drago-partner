@@ -4,6 +4,8 @@ import Index from '@/pages/Index'
 import PrivacyPolicy from '@/pages/PrivacyPolicy'
 import TermsOfService from '@/pages/TermsOfService'
 import NotFound from '@/pages/NotFound'
+import BlogIndex from '@/pages/BlogIndex'
+import BlogPost from '@/pages/BlogPost'
 import { CookieConsent } from '@/components/ui/CookieConsent'
 
 function App() {
@@ -14,6 +16,8 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <CookieConsent />
