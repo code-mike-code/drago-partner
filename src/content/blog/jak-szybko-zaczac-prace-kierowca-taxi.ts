@@ -25,7 +25,7 @@ export const jakSzybkoZaczacPrace: Article = {
     { type: 'h2', text: 'Krok 2: komplet dokumentów' },
     {
       type: 'p',
-      text: 'To etap, który najczęściej decyduje o tempie. Przygotuj:',
+      text: 'To etap, który najczęściej decyduje o tempie. Pełną listę wymogów opisujemy w artykule [wymogi prawne dla kierowcy taxi](/blog/wymogi-prawne-kierowca-taxi-polska/). Przygotuj:',
     },
     {
       type: 'list',
@@ -70,6 +70,10 @@ export const jakSzybkoZaczacPrace: Article = {
         'szybki kontakt z biurem, gdy zadzwonimy lub napiszemy z pytaniem o brakujący dokument.',
       ],
     },
+  ],
+  related: [
+    'wymogi-prawne-kierowca-taxi-polska',
+    'zarobki-kierowcy-uber-bolt-warszawa',
   ],
   faq: [
     {
