@@ -4,10 +4,33 @@ export const sr = {
     services: 'Usluge',
     faq: 'FAQ',
     rentals: 'Iznajmljivanje',
+    blog: 'Blog',
     contact: 'Kontakt',
     cta: 'Prijavi se',
     toggleMenu: 'Otvori/zatvori meni',
     selectLanguage: 'Odaberi jezik',
+  },
+
+  // Blog
+  blog: {
+    metaTitle: 'Blog za vozače i kurire | Drago Partner',
+    metaDescription: 'Saveti za taksi vozače i kurire u Varšavi: zarada na Uber-u i Bolt-u, pravni uslovi, taksi licenca i početak saradnje sa Drago Partner.',
+    badge: 'Baza znanja',
+    heading: 'Drago Partner blog',
+    subheading: 'Zarada, propisi i praktični saveti za taksi vozače i kurire u Varšavi.',
+    readMore: 'Pročitaj više',
+    minutes: 'min čitanja',
+    published: 'Objavljeno',
+    updated: 'Ažurirano',
+    allArticles: 'Svi članci',
+    tocHeading: 'U ovom članku',
+    faqHeading: 'Česta pitanja',
+    relatedHeading: 'Pročitajte i',
+    ctaHeading: 'Spremni da počnete sa Drago Partner?',
+    ctaText: 'Popunite formular i javićemo vam se u roku od 24 sata. Pomažemo oko dokumenata, licence i automobila.',
+    ctaButton: 'Popuni formular',
+    breadcrumbHome: 'Početna',
+    disclaimer: 'Članak je informativnog karaktera i nije pravni ni poreski savet. Iznosi i propisi mogu se menjati – proverite aktuelno stanje pre donošenja odluke.',
   },
 
   common: {

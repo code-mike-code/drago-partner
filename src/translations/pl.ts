@@ -5,10 +5,33 @@ export const pl = {
     services: 'Oferta',
     faq: 'FAQ',
     rentals: 'Wynajem',
+    blog: 'Blog',
     contact: 'Kontakt',
     cta: 'Aplikuj teraz',
     toggleMenu: 'Otwórz/zamknij menu',
     selectLanguage: 'Wybierz język',
+  },
+
+  // Blog
+  blog: {
+    metaTitle: 'Blog dla kierowców i kurierów | Drago Partner',
+    metaDescription: 'Poradniki dla kierowców taxi i kurierów w Warszawie: zarobki w Uber i Bolt, wymogi prawne, licencja taxi i start współpracy z Drago Partner.',
+    badge: 'Baza wiedzy',
+    heading: 'Blog Drago Partner',
+    subheading: 'Zarobki, przepisy i praktyczne porady dla kierowców taxi i kurierów w Warszawie.',
+    readMore: 'Czytaj dalej',
+    minutes: 'min czytania',
+    published: 'Opublikowano',
+    updated: 'Zaktualizowano',
+    allArticles: 'Wszystkie artykuły',
+    tocHeading: 'W tym artykule',
+    faqHeading: 'Najczęstsze pytania',
+    relatedHeading: 'Czytaj także',
+    ctaHeading: 'Chcesz zacząć z Drago Partner?',
+    ctaText: 'Wypełnij formularz, a odezwiemy się w ciągu 24 godzin. Pomożemy z dokumentami, licencją i autem.',
+    ctaButton: 'Wypełnij formularz',
+    breadcrumbHome: 'Strona główna',
+    disclaimer: 'Artykuł ma charakter informacyjny i nie stanowi porady prawnej ani podatkowej. Kwoty i przepisy mogą się zmieniać – sprawdź aktualny stan przed podjęciem decyzji.',
   },
 
   common: {

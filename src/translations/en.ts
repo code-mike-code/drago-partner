@@ -4,10 +4,33 @@ export const en = {
     services: 'Services',
     faq: 'FAQ',
     rentals: 'Rentals',
+    blog: 'Blog',
     contact: 'Contact',
     cta: 'Apply now',
     toggleMenu: 'Open/close menu',
     selectLanguage: 'Select language',
+  },
+
+  // Blog
+  blog: {
+    metaTitle: 'Blog for drivers and couriers | Drago Partner',
+    metaDescription: 'Guides for taxi drivers and couriers in Warsaw: Uber and Bolt earnings, legal requirements, taxi licence and how to start with Drago Partner.',
+    badge: 'Knowledge base',
+    heading: 'Drago Partner Blog',
+    subheading: 'Earnings, regulations and practical advice for taxi drivers and couriers in Warsaw.',
+    readMore: 'Read more',
+    minutes: 'min read',
+    published: 'Published',
+    updated: 'Updated',
+    allArticles: 'All articles',
+    tocHeading: 'In this article',
+    faqHeading: 'Frequently asked questions',
+    relatedHeading: 'Read also',
+    ctaHeading: 'Ready to start with Drago Partner?',
+    ctaText: 'Fill in the form and we will get back to you within 24 hours. We help with documents, licence and car.',
+    ctaButton: 'Fill in the form',
+    breadcrumbHome: 'Home',
+    disclaimer: 'This article is for information only and is not legal or tax advice. Amounts and regulations may change – check the current rules before making a decision.',
   },
 
   common: {
