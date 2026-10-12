@@ -1,4 +1,6 @@
+import { useEffect } from 'react'
 import { Helmet } from 'react-helmet-async'
+import { useLocation } from 'react-router-dom'
 import { useLanguage } from '@/hooks/useLanguage'
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
@@ -15,6 +17,15 @@ import { WhatsAppWidget } from '@/components/ui/WhatsAppWidget'
 
 export default function Index() {
   const { t } = useLanguage()
+  const { hash } = useLocation()
+
+  useEffect(() => {
+    if (!hash) return
+    const id = window.setTimeout(() => {
+      document.querySelector(hash)?.scrollIntoView()
+    }, 50)
+    return () => window.clearTimeout(id)
+  }, [hash])
 
   return (
     <>

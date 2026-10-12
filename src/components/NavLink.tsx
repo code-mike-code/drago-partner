@@ -9,12 +9,10 @@ interface NavLinkProps {
 
 export function NavLink({ href, children, className, onClick }: NavLinkProps) {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (href.startsWith('#')) {
+    const hash = href.startsWith('#') ? href : href.startsWith('/#') ? href.slice(1) : null
+    if (hash && (href.startsWith('#') || window.location.pathname === '/')) {
       e.preventDefault()
-      const target = document.querySelector(href)
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
-      }
+      document.querySelector(hash)?.scrollIntoView({ behavior: 'smooth' })
     }
     onClick?.()
   }

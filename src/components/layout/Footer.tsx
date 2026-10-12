@@ -18,10 +18,11 @@ export function Footer() {
   const address = t('contact.info.address')
 
   const navItems = [
-    { href: '#about', label: t('nav.about') },
-    { href: '#services', label: t('nav.services') },
-    { href: '#faq', label: t('nav.faq') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: '/#about', label: t('nav.about') },
+    { href: '/#services', label: t('nav.services') },
+    { href: '/#faq', label: t('nav.faq') },
+    { href: '/blog/', label: t('nav.blog') },
+    { href: '/#contact', label: t('nav.contact') },
   ]
 
   return (

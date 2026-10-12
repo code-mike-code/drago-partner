@@ -14,11 +14,12 @@ export function Header() {
   const phone = t('contact.info.phone')
 
   const navItems = useMemo(() => [
-    { href: '#about', label: t('nav.about') },
-    { href: '#services', label: t('nav.services') },
-    { href: '#faq', label: t('nav.faq') },
+    { href: '/#about', label: t('nav.about') },
+    { href: '/#services', label: t('nav.services') },
+    { href: '/#faq', label: t('nav.faq') },
+    { href: '/blog/', label: t('nav.blog') },
     { href: 'https://portal.dragopartner.pl/rentals', label: t('nav.rentals') },
-    { href: '#contact', label: t('nav.contact') },
+    { href: '/#contact', label: t('nav.contact') },
   ], [t])
 
   return (
@@ -46,7 +47,7 @@ export function Header() {
           {/* Desktop right */}
           <div className="hidden lg:flex items-center gap-4">
             <LanguageSwitcher />
-            <CTAButton href="#contact-form" variant="yellow" size="sm">
+            <CTAButton href="/#contact-form" variant="yellow" size="sm">
               {t('nav.cta')}
             </CTAButton>
             <a
@@ -122,7 +123,7 @@ export function Header() {
         <div className="px-6 pb-8 mb-32 space-y-4">
           {/* CTA */}
           <CTAButton
-            href="#contact-form"
+            href="/#contact-form"
             onClick={() => setMobileOpen(false)}
             variant="yellow"
             className="w-full"
