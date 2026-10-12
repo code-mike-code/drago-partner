@@ -9,6 +9,9 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
+  ssr: {
+    noExternal: ['react-helmet-async'],
+  },
   server: {
     port: 8080,
     allowedHosts: true // Zezwala na dostęp z każdego adresu (w tym ngrok)
