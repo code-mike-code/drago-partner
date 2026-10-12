@@ -3,6 +3,7 @@ export const gr = {
     about: 'ჩვენ შესახებ',
     services: 'სერვისები',
     faq: 'კითხვები',
+    rentals: 'ქირაობა',
     contact: 'კონტაქტი',
     cta: 'განაცხადი',
     toggleMenu: 'მენიუს გახსნა/დახურვა',

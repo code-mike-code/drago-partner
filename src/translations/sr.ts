@@ -3,6 +3,7 @@ export const sr = {
     about: 'O nama',
     services: 'Usluge',
     faq: 'FAQ',
+    rentals: 'Iznajmljivanje',
     contact: 'Kontakt',
     cta: 'Prijavi se',
     toggleMenu: 'Otvori/zatvori meni',

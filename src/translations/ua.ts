@@ -3,6 +3,7 @@ export const ua = {
     about: 'Про нас',
     services: 'Послуги',
     faq: 'FAQ',
+    rentals: 'Оренда',
     contact: 'Контакт',
     cta: 'Подати заявку',
     toggleMenu: 'Відкрити/закрити меню',

@@ -17,6 +17,7 @@ export function Header() {
     { href: '#about', label: t('nav.about') },
     { href: '#services', label: t('nav.services') },
     { href: '#faq', label: t('nav.faq') },
+    { href: 'https://portal.dragopartner.pl/rentals', label: t('nav.rentals') },
     { href: '#contact', label: t('nav.contact') },
   ], [t])
 

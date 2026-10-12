@@ -4,6 +4,7 @@ export const pl = {
     about: 'O nas',
     services: 'Oferta',
     faq: 'FAQ',
+    rentals: 'Wynajem',
     contact: 'Kontakt',
     cta: 'Aplikuj teraz',
     toggleMenu: 'Otwórz/zamknij menu',

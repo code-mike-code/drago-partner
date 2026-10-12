@@ -23,6 +23,7 @@ export function NavLink({ href, children, className, onClick }: NavLinkProps) {
     <a
       href={href}
       onClick={handleClick}
+      {...(href.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
       className={cn(
         'text-lg font-bold text-dark hover:text-grey-mid transition-colors duration-200',
         className,

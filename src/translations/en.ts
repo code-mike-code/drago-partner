@@ -3,6 +3,7 @@ export const en = {
     about: 'About',
     services: 'Services',
     faq: 'FAQ',
+    rentals: 'Rentals',
     contact: 'Contact',
     cta: 'Apply now',
     toggleMenu: 'Open/close menu',
