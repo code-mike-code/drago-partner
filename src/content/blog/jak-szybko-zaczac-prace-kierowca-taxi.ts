@@ -6,7 +6,7 @@ export const jakSzybkoZaczacPrace: Article = {
   lang: 'pl',
   title: 'Jak szybko można zacząć pracę jako kierowca taxi z Drago Partner?',
   description:
-    'Od formularza do pierwszego kursu: jakie dokumenty przygotować, jak wygląda spotkanie w biurze i co przyspiesza start jako kierowca taxi w Warszawie.',
+    'Od zgłoszenia do pierwszego kursu zwykle mija 5 dni. Sprawdź, jakie dokumenty przygotować i co przyspiesza start kierowcy taxi w Warszawie.',
   publishedAt: '2026-10-12',
   updatedAt: '2026-10-12',
   readingMinutes: 4,
@@ -15,7 +15,7 @@ export const jakSzybkoZaczacPrace: Article = {
   blocks: [
     {
       type: 'p',
-      text: 'Tempo startu jako kierowca taxi w Warszawie zależy głównie od jednego: jak szybko skompletujesz dokumenty. Resztę procesu – licencję, identyfikator i rejestrację w aplikacjach – prowadzimy z Tobą krok po kroku. Poniżej cały proces od pierwszego kontaktu do pierwszego kursu.',
+      text: 'W Drago Partner od zgłoszenia do pierwszego kursu mija zwykle 5 dni. Tempo startu jako kierowca taxi w Warszawie zależy głównie od jednego: jak szybko skompletujesz dokumenty. Resztę procesu – licencję, identyfikator i rejestrację w aplikacjach – prowadzimy z Tobą krok po kroku. Poniżej cały proces od pierwszego kontaktu do pierwszego kursu.',
     },
     { type: 'h2', text: 'Krok 1: formularz zgłoszeniowy' },
     {
@@ -76,6 +76,11 @@ export const jakSzybkoZaczacPrace: Article = {
     'zarobki-kierowcy-uber-bolt-warszawa',
   ],
   faq: [
+    {
+      question: 'Ile czasu mija od zgłoszenia do pierwszego kursu?',
+      answer:
+        'W Drago Partner zwykle 5 dni. Najbardziej wpływa na to szybkość skompletowania dokumentów.',
+    },
     {
       question: 'Czy muszę znać język polski, aby zacząć pracę?',
       answer:

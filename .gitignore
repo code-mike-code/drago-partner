@@ -20,6 +20,9 @@ dist-ssr/
 .claude/
 CLAUDE.md
 
+# Docs (specs, plans, notes)
+docs/
+
 # Local env files
 .env
 .env.local

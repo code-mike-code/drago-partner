@@ -15,4 +15,4 @@ Stan: 2026-10-12. Status wszystkich pozycji: **do weryfikacji przez właściciel
 | foreigner | ochrona czasowa obywateli Ukrainy: praca bez zezwolenia, obecnie do 4.03.2027 | informacje urzędów/praca.gov.pl z wyników wyszukiwania — **prawo imigracyjne, zweryfikuj na gov.pl/udsc.gov.pl** | 2026-10-12 |
 | foreigner | zasady wymiany zagranicznego prawa jazdy | brak źródła — artykuł odsyła do wydziału komunikacji; nie podaje reguł | — |
 | zarobki-kuriera | brak niezależnych stawek za zlecenie; artykuł opiera się na danych Drago i ogólnych zasadach | — | — |
-| jak-szybko | brak deklaracji czasowej — dodać, jeśli właściciel poda typowy czas od kompletu dokumentów do pierwszego kursu | właściciel | — |
+| jak-szybko | „od zgłoszenia do pierwszego kursu zwykle 5 dni” | właściciel (2026-10-13) | 2026-10-13 |

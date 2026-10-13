@@ -13,6 +13,7 @@ Drago Partner connects professional drivers and couriers with leading ride-haili
 - **Recruitment form** - integrated with Google Forms; the entry point for all candidates
 - **Office appointment booking** - via an internal CRM system, available after submitting the form
 - **Multilingual support** - 5 languages: Polish, English, Ukrainian, Serbian, Georgian
+- **Blog / knowledge base** - `/blog/` with SEO articles for drivers and couriers, prerendered to static HTML at build time
 - **Cookie consent** - GDPR-compliant banner with Google Analytics opt-in
 
 ---
@@ -42,11 +43,15 @@ src/
 │   ├── layout/           # Header, Footer
 │   ├── sections/         # HeroSection, AboutSection, ServicesSection,
 │   │                     # FAQSection, ContactSection, ContactFormSection
+│   ├── blog/             # ArticleBody, ArticleCard
 │   ├── ui/               # button.tsx, accordion.tsx, MapPopover.tsx
 │   ├── LanguageSwitcher.tsx
 │   └── NavLink.tsx
+├── content/blog/          # Blog articles (typed TS blocks), validator, index
 ├── pages/
 │   ├── Index.tsx          # Landing page
+│   ├── BlogIndex.tsx      # /blog/ - article list
+│   ├── BlogPost.tsx       # /blog/<slug>/ - single article
 │   ├── PrivacyPolicy.tsx
 │   ├── TermsOfService.tsx
 │   └── NotFound.tsx
@@ -60,7 +65,9 @@ src/
 │   └── gr.ts              # Georgian
 ├── lib/
 │   └── utils.ts           # cn() utility (clsx + tailwind-merge)
+├── entry-server.tsx       # SSR entry used by the blog prerender
 └── assets/
+scripts/                   # prerender.mjs + lib (+ node:test tests)
 ```
 
 ---
@@ -84,10 +91,11 @@ npm install
 
 ```bash
 npm run dev        # Dev server at http://localhost:8080
-npm run build      # Production build → dist/
+npm run build      # Production build + blog prerender → dist/
 npm run build:dev  # Dev build with source maps
 npm run preview    # Preview production build locally
 npm run lint       # ESLint
+npm test           # Tests for prerender scripts (node:test)
 ```
 
 ---
@@ -149,20 +157,9 @@ Translation files live in `src/translations/`. When adding new copy, add the key
 npm run build
 ```
 
-Output goes to `dist/`. The folder must include a `.htaccess` file for SPA routing (Apache / Plesk):
+`npm run build` runs four steps: type-check, client build, SSR build of the blog (`dist-ssr/`), and `scripts/prerender.mjs`, which writes `dist/blog/**/index.html` (full article HTML, meta, canonical, JSON-LD) and appends the blog URLs to `dist/sitemap.xml` and `dist/llms.txt`. Article content is validated during the build (title/description length, unique slugs, valid internal links) - the build fails on errors.
 
-```apache
-Options -MultiViews
-RewriteEngine On
-RewriteBase /
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ index.html [L]
-
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-```
+Output goes to `dist/`. `public/.htaccess` is copied into `dist/` automatically (HTTPS redirect, SPA fallback, gzip, cache). If the server already has its own `.htaccess`, merge it instead of overwriting.
 
 ### Hosting — idHosting (Plesk)
 
@@ -171,11 +168,19 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 ---
 
+## Blog
+
+Articles live in `src/content/blog/<slug>.ts` as typed blocks (`h2`, `p`, `list`, `callout`) plus optional FAQ and `related` slugs; inline links use `[text](/blog/slug/)`. To add an article: create the file, register it in `src/content/blog/index.ts`, run `npm run build`. Facts and figures should be recorded with sources in `docs/superpowers/blog-verification.md` (local notes).
+
+---
+
 ## Pages
 
 | Route | Component | Description |
 |---|---|---|
 | `/` | `Index.tsx` | Main landing page |
+| `/blog/` | `BlogIndex.tsx` | Blog article list |
+| `/blog/<slug>/` | `BlogPost.tsx` | Single article (prerendered) |
 | `/privacy-policy` | `PrivacyPolicy.tsx` | GDPR privacy & cookie policy |
 | `/terms-of-service` | `TermsOfService.tsx` | Terms of service |
 | `*` | `NotFound.tsx` | 404 fallback |
@@ -192,5 +197,5 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ---
 
 **Version:** 0.2.0
-**Last updated:** March 2026
+**Last updated:** October 2026
 **License:** Private - all rights reserved.
